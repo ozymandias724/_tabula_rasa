@@ -2,9 +2,27 @@
 /**
  * 
  */
-	// if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-		// echo '<script src="//localhost:35729/livereload.js"></script>';
-	// }
+
+	$return = '';
+	$guides = [
+		'
+			<footer class="footer">
+				%1$s
+			</footer>
+		'
+	];
+
+	$return .= sprintf(
+		$guides[0]
+		,'<h2>FOOTER</h2>'
+	);
+
+	
+	echo $return;
+
+
+
+
 	wp_footer();
 ?>
 </body>
