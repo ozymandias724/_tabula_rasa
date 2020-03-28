@@ -5,13 +5,13 @@
 $rfs-base-value: 1.6rem !default; // the smallest font size
 $rfs-factor: 10 !default;
 $rfs-rem-value: 10 !default;
-@import '../../_build//_lib/rfs/rfs';
+@import '_lib/rfs';
 
 // pre-theme stuff
-@import 'base/vars';
-@import 'base/mixins';
+@import '_req/vars.scss';
+@import '_req/mixins';
+
 @import 'base/reset';
-@import 'base/primer';
 @import 'base/elems';
 
 // theme stuff
@@ -19,3 +19,7 @@ $rfs-rem-value: 10 !default;
 
 @import 'header/header';
 @import 'header/nav';
+
+// modules
+
+@import '//modules/_build/modules';

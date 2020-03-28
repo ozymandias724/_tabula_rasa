@@ -1,1 +1,0 @@
-!function(n){n(function(){n("html").removeClass("no-js")})}(window.jQuery,window,document);
