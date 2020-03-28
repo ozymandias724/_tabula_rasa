@@ -2,13 +2,16 @@
 /**
  * Template: Page
  * 
- */
+*/
 
-get_header();
+	// 
+	$fields = get_fields( get_the_ID() );
+
+	get_header();
+
 ?>
 <main>
 	<?php
-		$fields = get_fields( get_the_ID() );
 		include_once('includes/pagehero.php');
 		/**
 		 *  Loop thru the 'content blocks' flexible content field
@@ -17,7 +20,7 @@ get_header();
 		if (!empty($fields['modular_content'])) {
 			
 			foreach ($fields['modular_content'] as $cB) {
-				include_once(locate_template( 'modules/'.$cB['acf_fc_layout'].'/module.'.$cB['acf_fc_layout'].'.php'));
+				include_once('modules/'.$cB['acf_fc_layout'].'/module.'.$cB['acf_fc_layout'].'.php');
 			}
 			
 		}

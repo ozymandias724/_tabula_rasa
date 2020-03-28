@@ -15,7 +15,11 @@ function do_filter_body_class( $classes ) {
 add_filter( 'body_class', 'do_filter_body_class' );
  
  
- 
+add_action( 'wp_footer', 'do_add_authoredby_subfooter' );
+function do_add_authoredby_subfooter(){
+
+  echo '<span id="madebykylemarcy">proudly built by <a href="kylemarcy.com" target="_blank">@kylemarcy.com</a></span>';
+}
  
  
 ?>

@@ -63,24 +63,24 @@
 		"oAP": "/_build/css/modules.css.map",
 		"oF": 0
 		},
-	"/_build/js/admin-min.js": {
+	"/_build/js/admin.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/_build/js/admin-min-min.js",
+		"oAP": "/_build/js/admin-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/_build/js/main-min.js": {
+	"/_build/js/main.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/_build/js/main-min-min.js",
+		"oAP": "/_build/js/main-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -102,7 +102,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/_build/js/admin-min.js",
+		"oAP": "/_build/js/admin.js",
 		"oF": 2,
 		"sC": 3,
 		"tS": 0
@@ -113,7 +113,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/_build/js/main-min.js",
+		"oAP": "/_build/js/main.js",
 		"oF": 2,
 		"sC": 3,
 		"tS": 0
@@ -423,7 +423,7 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_build/css/modules.css",
 		"oF": 3,
 		"oS": 3,
@@ -542,7 +542,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets-ucla",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 607111019.68838298
+	"lastBuiltDate": 607132480.12344694
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2536,7 +2536,7 @@
 		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSASS": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*.css",
 		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",

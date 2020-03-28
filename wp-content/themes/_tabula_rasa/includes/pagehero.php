@@ -3,7 +3,7 @@
  * 
  */
 
-  if( $fields['hero']['status'] == true ){
+  if( !empty($fields['hero']) ){
   
     $guides = [
       '<section class="hero">

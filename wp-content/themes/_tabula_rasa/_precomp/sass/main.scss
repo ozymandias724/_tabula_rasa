@@ -8,7 +8,7 @@ $rfs-rem-value: 10 !default;
 @import '_lib/rfs';
 
 // pre-theme stuff
-@import '_req/vars.scss';
+@import '_req/vars';
 @import '_req/mixins';
 @import 'base/reset';
 
@@ -22,5 +22,4 @@ $rfs-rem-value: 10 !default;
 @import 'header/nav';
 
 // modules
-
-@import '//modules/_build/modules';
+@import '../../modules/_build/modules';

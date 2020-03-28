@@ -57,6 +57,7 @@ class SetupTheme
      */
 	public static function enqueue_scripts(){
 
+
         wp_deregister_script('jquery');
         wp_enqueue_script('jquery', get_template_directory_uri().'/_precomp/js/_lib/jquery.min.js', array(), null, true);
 
