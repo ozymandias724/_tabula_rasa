@@ -1,0 +1,69 @@
+// 
+// 
+//   
+//  Header
+//  Note: Nav is in its own file
+// 
+//  
+
+// 
+header.header {
+  // 
+  $g: getVar($sizing, gutter, px, normal);
+  // 
+  display: block;
+  width: 100%;
+  height: 72px;
+
+
+  background-color: rgba(getVar($pallete, basic, white), 1);    // disabled on fixed header
+
+  // full height container (width options available)
+  >.container{
+      height: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+      
+      .logo {
+          height: 100%;
+          padding: 5px 0;
+      }
+  }
+  
+  // if this is a fixed header
+  &.fixed {
+      position: fixed;
+      z-index: 99;
+      @include boxshadow(1);
+      border-bottom: 1px solid rgba(getVar($pallete, basic, gray), 1);
+      transition: background-color 0.4s ease-in-out;
+      // background-color: rgba(getVar($pallete, basic, black), 1);
+      
+      &.fadein {
+          &.bg__fade-in {
+              // background-color: rgba(getVar($pallete, basic, white), 0.95);
+              // background-color: rgba(getVar($pallete, basic, black), 0.9);
+              .logo.logo--text,
+              .navlinks > ul > li > a {
+                  // color: rgba(getVar($pallete, basic, black), 1);
+              }
+          }
+      }
+  }
+  //
+}
+
+// 
+//  transparent header that fades-in on scroll
+// 
+body.header-fadein {
+  
+  header.header.fixed.fadein {
+      // 
+      @include boxshadow(0);
+  
+  }
+}

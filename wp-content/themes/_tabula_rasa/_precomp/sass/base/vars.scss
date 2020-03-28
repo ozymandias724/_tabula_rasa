@@ -1,0 +1,19 @@
+// gets nested variables
+// i.e., getVar($type, nested key, nested value);
+@function getVar($v, $ks...) {
+  @each $k in $ks {
+    $v: map-get($v, $k);
+  }
+
+  @return $v;
+}
+
+
+
+
+// 
+$sizing : (content : (full : 100%, wide : 80%, normal : 65%, narrow : 50%), gutter : (px : (small : 15px, normal : 30px, large : 60px, xlarge : 90px, vxlarge : 120px), vw : (small : 1vw, normal : 2vw, large : 5vw, xlarge : 10vw, vxlarge : 15vw)));
+
+
+// map of all theme base colors
+$pallete : (brand : (lshade :#f9f8f5, dshade : #261E35, laccent : #83cdf8, daccent : #ef610d, main : #9F5B77), basic : (white : #fff, black : #000, gray : #5e5b5b));

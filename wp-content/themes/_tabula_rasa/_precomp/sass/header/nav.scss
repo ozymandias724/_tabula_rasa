@@ -1,0 +1,290 @@
+// 
+// 
+// 
+
+
+//  Header Nav
+header {
+  // 
+  $g: getVar($sizing, gutter, px, normal);
+
+  // 
+  .navlinks {
+
+    // 
+    >ul {
+      display: flex;
+      flex-flow: row nowrap;
+
+      //  low specificity basic styling for any level line item
+      li {
+
+        // active items are underlined
+        &.active,
+        &.active-ancestor,
+        &.active-parent {
+          >a>span:before {
+            width: 100%;
+          }
+        }
+
+        // any/all links, any/all levels
+        a {
+          display: block; // using flexbox
+
+          // color: getVar($pallete, basic, black); // dark on light
+
+          // 
+          // link text (and chevron if a parent) accent underline effect
+          >span {
+            // color: getVar($pallete, basic, white); // light on dark
+            white-space: nowrap; // no line wrapping allowed
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 0 5px 2px 5px;
+            font-size: 1.6rem;
+            line-height: 1;
+            // underline hidden
+            @include accentUnderline();
+          }
+
+          // underline revealed
+          &:hover,
+          &:focus,
+          &:active {
+            >span:before {
+              width: 100%;
+            }
+          }
+        }
+
+        // any parent item at any level
+        &.parent {
+          position: relative;
+
+          .sub-menu {
+            display: none;
+          }
+
+          // the down-chevron 
+          >a>span {
+            position: relative;
+            padding-right: 15px;
+
+            // note; :before is being used by the underline!
+            &:after {
+              content: "\f078";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              display: block;
+              position: absolute;
+              font-size: 1rem;
+              top: 50%;
+              right: 0;
+              transform: translate(0, -50%) rotate(0deg);
+              transition: all 0.25s ease;
+            }
+          }
+
+          &:hover,
+          &:focus,
+          &:active {
+            >a>span {
+
+              // rotate chevron
+              &:after {
+                transform: translate(0, -50%) rotate(180deg);
+                color: getVar($pallete, brand, main);
+              }
+            }
+
+            // reveal dropdown menu ( but not grand-child sub-menus )
+            >.sub-menu {
+              display: flex;
+            }
+          }
+
+          // 
+          &:last-child {
+            margin: 0 0 0 0;
+          }
+        }
+      }
+
+
+      //  top level line items only
+      >li {
+        // top level nav items line-height = header height
+        margin: 0 ($g / 2) 0 0;
+
+        &:last-of-type {
+          margin: 0 0 0 0;
+        }
+      }
+
+
+      // only for the desktop nav; styles for the dropdowns
+      // this is here to prevent a lot of work cleaning up the sub-menu for use in the mobile version
+      @media screen and (min-width:961px) {
+
+        //  full height top level nav items
+        >li {
+          >a {
+            line-height: 72px;
+            white-space: nowrap;
+          }
+        }
+
+        .sub-menu {
+          flex-flow: column nowrap;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          // z-index: 9;
+          // 
+
+          background-color: rgba(getVar($pallete, basic, white), 1);
+          @include boxshadow(1);
+
+          >li {
+            padding: 7.5px 0;
+
+            >a {
+              padding: 0px 15px;
+
+              >span {
+                padding: 2px 0;
+              }
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+              >a>span:before {
+                width: 100%;
+              }
+            }
+          }
+
+          .sub-menu {
+            top: 0;
+            right: 100%;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .navicons {
+    display: none;
+    cursor: pointer;
+  }
+}
+
+// overrides!
+header.fixed.fadein {
+  .navlinks>ul>li>a>span {
+    color: getVar($pallete, basic, white);
+  }
+}
+
+header.static {
+
+  .logo.logo--text,
+  .navlinks>ul>li>a>span {
+    color: getVar($pallete, basic, black);
+  }
+
+  .header .navlinks>ul .sub-menu {
+    background-color: rgba(getVar($pallete, basic, white), 1);
+
+    >li>a>span {
+      color: getVar($pallete, basic, black);
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  header {
+    >.container {
+      .navlinks {
+        display: none;
+      }
+
+      .navicons {
+        display: block;
+        padding: 5px;
+        color: getVar($pallete, basic, white);
+
+        >i.fas {
+          &.fa-times {
+            display: none;
+          }
+
+          &.fa-bars {
+            display: block;
+          }
+        }
+      }
+
+      &.mobilenav-opened {
+        .navicons {
+          >i.fas {
+            color: getVar($pallete, brand, main);
+
+            &.fa-times {
+              display: block;
+            }
+
+            &.fa-bars {
+              display: none;
+            }
+          }
+        }
+
+        // at mobile, the .navlinks wrapper becomes a clickgaurd overlay
+        .navlinks {
+          display: block;
+          position: fixed;
+          top: 72px;
+          left: 0;
+          width: 100%;
+          height: calc(100% - 72px);
+          background-color: rgba(getVar($pallete, basic, black), 0.5); // tinted clickgaurd
+
+          >ul.menu {
+            border: 1px solid rgba(getVar($pallete, basic, white), 0.5);
+            background-color: rgba(getVar($pallete, basic, black), 1);
+            display: flex;
+            flex-flow: column nowrap;
+            width: 80%;
+            margin: 0 auto;
+            padding: 15px;
+            @include boxshadow(2);
+
+            >li {
+              margin: 15px 0 0 0;
+
+              &:last-child {
+                margin: 15px 0;
+              }
+            }
+
+            .sub-menu {
+              display: flex;
+              flex-flow: column nowrap;
+              display: flex;
+              margin-left: getVar($sizing, gutter, px, normal);
+
+              >li {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

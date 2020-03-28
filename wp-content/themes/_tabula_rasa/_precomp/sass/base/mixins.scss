@@ -1,0 +1,181 @@
+// this allows a grdient to be added to elements (we need a way to pass values into this to allow for varying gradient directions, sizes, etc.)
+@mixin bgGradient($el:after, $w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($pallete, basic, black), 0.0), $eC:rgba(getVar($pallete, basic, black), 0.66)) {
+  position: relative;
+
+  &:#{$el} {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: $w;
+    height: $h;
+    background: -moz-linear-gradient(#{$p}, $sC 0%, $eC 75%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(#{$p}, $sC 0%, $eC 75%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to #{$p}, $sC 0%, $eC 75%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transition: background 0.3s cubic-bezier(.25, .8, .25, 1);
+  }
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin bgimage {
+  // background-color: black; // solid black fallback placeholder
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin accentUnderline($el : before, $h : 2px, $d:right) {
+
+  position: relative;
+  padding-bottom: #{$h};
+
+  &:#{$el} {
+    content: '';
+    display: block;
+    position: absolute;
+
+    bottom: -#{$h};
+
+    @if $d==right {
+      left: 0;
+      right: auto;
+    }
+
+    @else if $d==left {
+      right: 0;
+      left: auto;
+    }
+
+    width: 0;
+    height: 0;
+    transition: width 0.25s ease;
+    border-bottom: $h solid getVar($pallete, brand, daccent);
+  }
+
+}
+
+
+
+
+@mixin boxshadow($depth:1) {
+  @if $depth==0 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.0), 0 1px 2px rgba(0, 0, 0, 0.0);
+  }
+
+  @if $depth==1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  @else if $depth==2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  @else if $depth==3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  @else if $depth==4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  @else if $depth==5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+
+// 
+@mixin flexboxGrid($cols: 3, $gutter: 2.5vw, $align: flex-start, $justify: flex-start, $grow : 1, $shrink: 0, $sq:0) {
+
+
+  // calculate flex basis (width) of a column
+  $basis: calc((100% - (#{$cols} - 1) * #{$gutter}) / #{$cols});
+
+  >ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: $align;
+    justify-content: $justify;
+
+    &.left {
+      justify-content: flex-start;
+    }
+
+    &.center {
+      justify-content: center;
+    }
+
+    &.right {
+      justify-content: flex-end;
+    }
+
+    >li {
+      position: relative;
+      display: inline-block;
+
+      // note~
+      // the 'desired width' is set both as the flex basis and the width
+      // this is giving me the best results but there is a lot of wiggle room in how to slam the grid down
+      width: #{$basis};
+      flex: $grow $shrink #{$basis};
+      // ~note
+
+      margin: 0 $gutter $gutter 0;
+
+      // overflow: hidden;
+      &:nth-of-type(n+1) {
+        margin: 0 $gutter $gutter 0;
+      }
+
+      &:nth-of-type(#{$cols}n) {
+        margin-right: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      // if 1 col is passed (for mobile)
+      @if $cols==1 {
+        flex: 1 0 100%;
+        margin: 0 0 $gutter 0;
+
+        &:last-of-type {
+          margin: 0 0 0 0;
+        }
+      }
+
+      @if $sq==1 {
+        @include aspectRatio(1, 1);
+      }
+    }
+  }
+}
+
+// 
+@mixin aspectRatio($x : 1, $y : 1) {
+  $ratio: ($y / $x) * 100%;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: $ratio;
+  }
+}

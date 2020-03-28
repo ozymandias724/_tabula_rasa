@@ -18,5 +18,8 @@ wp-content/themes/*
 !wp-content/themes/_tabula_rasa/
 
 # Ignore node_modules and sass-cache in 'themes'
-wp-content/themes/*/node_modules/**
+wp-content/themes/*/node_modules/*
 wp-content/themes/*/.sass-cache/*
+
+# Don't ignore certain NPM libraries we are including
+# !wp-content/themes/*/node_modules/@fortawesome/

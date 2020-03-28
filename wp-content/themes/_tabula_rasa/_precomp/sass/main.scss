@@ -1,0 +1,21 @@
+/**
+*   Main SCSS
+*/
+
+$rfs-base-value: 1.6rem !default; // the smallest font size
+$rfs-factor: 10 !default;
+$rfs-rem-value: 10 !default;
+@import '../../_build//_lib/rfs/rfs';
+
+// pre-theme stuff
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/reset';
+@import 'base/primer';
+@import 'base/elems';
+
+// theme stuff
+@import 'includes/grid';
+
+@import 'header/header';
+@import 'header/nav';

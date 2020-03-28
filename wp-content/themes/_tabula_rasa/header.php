@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<title><?php echo get_bloginfo('name') . ' | ' . get_bloginfo('description'); ?></title>
-		<?php wp_head(); ?>		
-
-		<!--[if lt IE 9]>
-		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	</head>
-	<body>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><?php echo get_bloginfo('name') . ' | ' . get_bloginfo('description'); ?></title>
+	<?php wp_head(); ?>		
+</head>
+<body <?php body_class(); ?>>
+<?php
+	// call in wp nav
+	include('includes/nav.header.php');
+ ?>

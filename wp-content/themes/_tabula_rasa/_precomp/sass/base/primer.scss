@@ -1,0 +1,224 @@
+/* 
+*   Basic Styles
+*/
+body {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  @include font-size(1.6rem);
+}
+
+/*
+*   Basic Sizing
+*/
+p {
+  margin: getVar($sizing, gutter, px, small) 0 0 0;
+  &:first-child { margin: 0; }
+}
+/* 
+*   Heading Styles
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 1.5rem 0 0 0;
+  &:first-child { margin: 0; }
+}
+/* 
+*
+*   Heading Sizing
+*
+*/
+h1 { 
+  @include font-size(9.6rem); 
+}
+h2 { 
+  @include font-size(4.8rem); 
+}
+h3 { 
+  @include font-size(3.6rem); 
+}
+h4 { 
+  @include font-size(2.4rem); 
+}
+h5 { 
+  @include font-size(2rem); 
+}
+h6 { 
+  @include font-size(1.6rem); 
+}
+
+a {
+  text-decoration: none;
+  color: rgba(getVar($pallete, basic, black), 1);
+  border: none 0;
+}
+figure {
+  position: relative;
+  overflow: hidden;
+}
+img {
+  object-fit: cover;
+  height: auto;
+  max-width: 100%;
+  // margin: 0 auto;
+}
+blockquote {
+  $g: getVar($sizing, gutter, px, small);
+  padding: 0 0 0 $g;
+  border: none 0;
+  border-left: 4px solid rgba(getVar($pallete, brand, main), 1);
+
+  @media screen and (max-width:640px) {
+      padding: 0 0 $g 0;
+      margin: 0 0 0 0;
+      border: none 0;
+      border-bottom: 4px solid rgba(getVar($pallete, brand, main), 1);
+  }
+}
+hr {
+  border: none;
+  border-bottom: 2px solid rgba(getVar($pallete, basic, black), 0.1);
+}
+ul, ol {
+  list-style-type: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// 
+// 
+body {
+  // flex align the footer to the bottom
+  display: flex;
+  flex-flow: column nowrap;
+  // bgc
+  > header {
+      flex: 0 0 auto;
+  }
+  >main {
+      flex: 1 0 auto;
+  }
+  > footer {
+      flex: 0 0 auto;
+  }
+
+  &.js__noscroll {
+      overflow: hidden;
+  }
+  &.fixed {
+      main {
+          margin-top: 72px;
+      }
+  }
+}
+
+
+// vertical layout
+
+.footer,
+.prefooter,
+main > .site__block {
+  margin: getVar($sizing, gutter, vw, xlarge) 0 0 0;
+}
+
+// horizontal layout
+// ( width containers for all blocks, a pattern that is ~everywhere~ )
+header,
+main > section,
+main > .site__block,
+footer {
+  >.container {
+      // 
+      margin: 0 auto;
+      // 
+      &.full { width: getVar($sizing, content, full); }
+      &.wide { width: getVar($sizing, content, wide); }
+      &.normal { width: getVar($sizing, content, normal); }
+      &.narrow { width: getVar($sizing, content, narrow); }
+      // 
+      
+      // adjust widths
+      @media screen and (max-width: 1280px) {
+          &.narrow {
+              width: getVar($sizing, content, normal);
+          }
+      }
+      // adjust widths
+      @media screen and (max-width: 960px) {
+          &.normal, &.narrow {
+              width: getVar($sizing, content, wide);
+          }
+      }
+  }
+}
+
+main > {
+  // if the block has a bg
+  .site__block.block__has-bg {
+      margin: 0;
+      padding: getVar($sizing, gutter, px, large) 0;
+      &.block__light-text {
+          & {
+              color: rgba(getVar($pallete, basic, white), 1);
+          }
+          a.button {
+              border-color: rgba(getVar($pallete, brand, main), 1);
+              color: rgba(getVar($pallete, basic, white), 1);
+          }
+      }
+
+      &:nth-last-of-type(2) {
+          + .prefooter {
+              margin: 0;
+          }
+      }
+  }
+  // if a block w/o a background has a block with a bg after it; restore the margin
+  .site__block:not(.block__has-bg) {
+      + .site__block.block__has-bg {
+          margin: getVar($sizing, gutter, vw, xlarge) 0 0 0;
+      }
+  }
+}
