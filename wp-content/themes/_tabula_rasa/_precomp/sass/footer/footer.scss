@@ -1,0 +1,29 @@
+// 
+// 
+// 
+footer.footer {
+
+  text-align: center;
+  border: none 0;
+  border-top: 1px solid black;
+  
+
+  + #madebykylemarcy {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: x-small;
+    background-color: black;
+    font-style: italic;
+    padding: 10px;
+    span {
+      letter-spacing: 1ch;
+    }
+    a, & {
+      color: white;
+    }
+  }
+}

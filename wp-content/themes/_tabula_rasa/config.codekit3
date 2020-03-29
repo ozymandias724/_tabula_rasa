@@ -196,6 +196,45 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/_precomp/sass/footer/footer-nav.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_precomp/sass/footer/footer-nav.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/_precomp/sass/footer/footer.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_precomp/sass/footer/footer.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/_precomp/sass/header/header-nav.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_precomp/sass/header/header-nav.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/_precomp/sass/header/header.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -209,19 +248,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/_precomp/sass/header/nav.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/_precomp/sass/header/nav.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"/_precomp/sass/includes/grid.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -231,6 +257,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/_precomp/sass/includes/grid.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/_precomp/sass/includes/pagehero.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_precomp/sass/includes/pagehero.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1

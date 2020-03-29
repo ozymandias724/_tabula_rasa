@@ -16,10 +16,18 @@ $rfs-rem-value: 10 !default;
 @import 'base/elems';
 
 // theme stuff
-@import 'includes/grid';
-
 @import 'header/header';
-@import 'header/nav';
+@import 'header/header-nav';
+// 
+@import 'footer/footer';
+@import 'footer/footer-nav';
+// 
+@import 'includes/grid';
+// 
+@import 'includes/pagehero';
+//
+
+
 
 // modules
 @import '../../modules/_build/modules';
