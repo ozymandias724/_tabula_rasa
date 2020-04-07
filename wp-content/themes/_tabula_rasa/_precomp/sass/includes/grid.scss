@@ -1,70 +1,70 @@
 // 
 //  Defaults from the mixin included here for ease of use --- but double check ;)
-//  @include flexboxGrid($cols: 3, $gutter: 30px, $align: flex-start, $justify: flex-start, $grow : 1, $shrink: 0, $sq:0);
+//  @include flexGrid($c: 3, $gutter: 30px, $align: flex-start, $justify: flex-start, $grow : 1, $shrink: 0, $sq:0);
 // 
 
 
 .flexgrid {
+	
+	// push self down from above block
+	margin: getVar($sizing, gutter, px, large) 0 -30px 0;
 
-  // push self down from above block
-  margin: getVar($sizing, gutter, px, large) 0 -30px 0;
-  
-  // cols-1 has no hanging gutter
-  &.cols-1 {
-      margin: getVar($sizing, gutter, px, large) 0 0 0;
-  }
+	// cols-1 has no hanging gutter
+	&.cols-1 {
+		margin: getVar($sizing, gutter, px, large) 0 0 0;
+	}
 
-  // if has no siblings, then dont push down
-  &:first-child:last-child {
-      margin: 0 0 0 0;
-  }
+	// if has no siblings, then dont push down
+	&:first-child:last-child {
+		margin: 0 0 0 0;
+	}
 
-  // 1-6 columns defaults
-  @for $n from 1 through 6 {
-      &.cols-#{$n} {
-          @include flexboxGrid($cols : $n);
-      }
-  }
+	// 1-6 columns defaults
+	@for $n from 1 through 6 {
+		&.cols-#{$n} {
+			@include flexGrid($c : $n);
+		}
+	}
 }
 
 @media screen and (max-width: 1280px) {
 
-  // 
-  .flexgrid {
+	// 
+	.flexgrid {
 
-      // cols-4 and up drop to 3 cols max
-      @for $n from 4 through 6 {
-          &.cols-#{$n} {
-              @include flexboxGrid($cols : 3);
-          }
-      }
-  }
+		// cols-4 and up drop to 3 cols max
+		@for $n from 4 through 6 {
+			&.cols-#{$n} {
+				@include flexGrid($c : 3);
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 960px) {
 
-  // 
-  .flexgrid {
+	// 
+	.flexgrid {
 
-      // cols-2 and up drop to 2 cols max
-      @for $n from 2 through 6 {
-          &.cols-#{$n} {
-              @include flexboxGrid($cols : 2);
-          }
-      }
-  }
+		// cols-2 and up drop to 2 cols max
+		@for $n from 2 through 6 {
+			&.cols-#{$n} {
+				@include flexGrid($c : 2);
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 640px) {
 
-  // 
-  .flexgrid {
+	// 
+	.flexgrid {
 
-      // everything becomes 1 col
-      @for $n from 1 through 6 {
-          &.cols-#{$n} {
-              @include flexboxGrid($cols : 1);
-          }
-      }
-  }
+		// everything becomes 1 col
+		@for $n from 1 through 6 {
+			&.cols-#{$n} {
+				@include flexGrid($c : 1);
+			}
+		}
+	}
 }

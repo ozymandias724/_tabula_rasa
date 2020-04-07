@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_5d4b615a94079",
@@ -59,12 +59,12 @@
                     },
                     "choices": {
                         "narrow": "Narrow",
-                        "medium": "Medium",
+                        "normal": "Normal",
                         "wide": "Wide",
                         "full": "Full"
                     },
                     "default_value": [
-                        "medium"
+                        "normal"
                     ],
                     "allow_null": 0,
                     "multiple": 0,
@@ -98,7 +98,7 @@
                         "image": "Image",
                         "slider": "Slider",
                         "video": "Video",
-                        "gradient": "Gradient"
+                        "color__gradient": "Color \/ Gradient"
                     },
                     "default_value": [],
                     "allow_null": 1,
@@ -109,10 +109,10 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_5e5b03b84d8d7",
-                    "label": "Gradient",
-                    "name": "gradient",
-                    "type": "group",
+                    "key": "field_5e80288247e36",
+                    "label": "Color \/ Gradient",
+                    "name": "color__gradient",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -125,7 +125,7 @@
                             {
                                 "field": "field_5e5b01b2a9291",
                                 "operator": "==",
-                                "value": "gradient"
+                                "value": "color__gradient"
                             }
                         ]
                     ],
@@ -134,42 +134,16 @@
                         "class": "",
                         "id": ""
                     },
+                    "collapsed": "field_5e80289347e37",
+                    "min": 0,
+                    "max": 0,
                     "layout": "table",
+                    "button_label": "",
                     "sub_fields": [
                         {
-                            "key": "field_5e5b03c64d8d8",
-                            "label": "Starting",
-                            "name": "starting",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": ""
-                        },
-                        {
-                            "key": "field_5e5b03d14d8d9",
-                            "label": "Middle",
-                            "name": "middle",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": ""
-                        },
-                        {
-                            "key": "field_5e5b03d74d8da",
-                            "label": "End",
-                            "name": "end",
+                            "key": "field_5e80289347e37",
+                            "label": "Color",
+                            "name": "color",
                             "type": "color_picker",
                             "instructions": "",
                             "required": 0,
@@ -182,6 +156,43 @@
                             "default_value": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_5e5b0267a9293",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d4b615a94079",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_5e5b01b2a9291",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
                 },
                 {
                     "key": "field_5e5b0237a9292",
@@ -224,43 +235,6 @@
                     "preview_size": "medium"
                 },
                 {
-                    "key": "field_5e5b0267a9293",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5d4b615a94079",
-                                "operator": "==",
-                                "value": "1"
-                            },
-                            {
-                                "field": "field_5e5b01b2a9291",
-                                "operator": "==",
-                                "value": "image"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
                     "key": "field_5e5b04404d8df",
                     "label": "Video",
                     "name": "video",
@@ -288,6 +262,33 @@
                     },
                     "default_value": "",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_5e80297fd5c93",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d4b615a94079",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Light",
+                    "ui_off_text": "Dark"
                 },
                 {
                     "key": "field_5e5b045df9d3b",
@@ -371,5 +372,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Page Hero",
-    "modified": 1585419957
+    "modified": 1585705030
 }

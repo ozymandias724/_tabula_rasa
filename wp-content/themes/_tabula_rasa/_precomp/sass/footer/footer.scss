@@ -6,6 +6,33 @@ footer.footer {
   text-align: center;
   border: none 0;
   border-top: 1px solid black;
+
+  
+  > .container {
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    > section {
+      flex: 0 1 auto;
+
+      margin: 0 0 0 getVar($sizing, gutter, px, normal);
+      &:first-of-type {
+        margin: 0 0 0 0;
+      }
+    }
+
+
+    .footer-navmenu {
+      > p {
+        display: block;
+        @include font-size(3rem);
+      }
+
+    }
+
+  }
+
   
 
   + #madebykylemarcy {

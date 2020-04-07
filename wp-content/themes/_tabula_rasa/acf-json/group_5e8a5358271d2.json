@@ -1,9 +1,38 @@
 {
-    "key": "group_5e67e3e6945e1",
+    "key": "group_5e8a5358271d2",
     "title": "Columns Module",
     "fields": [
         {
-            "key": "field_5e67e46f905b0",
+            "key": "field_5e8a97726a615",
+            "label": "Width",
+            "name": "width",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "narrow": "Narrow",
+                "normal": "Normal",
+                "wide": "Wide",
+                "full": "Full"
+            },
+            "default_value": [
+                "normal"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e8a536ca8738",
             "label": "Columns",
             "name": "columns",
             "type": "repeater",
@@ -15,14 +44,14 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "collapsed": "field_5e8a537ba8739",
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "add a Column",
             "sub_fields": [
                 {
-                    "key": "field_5e67e479905b1",
+                    "key": "field_5e8a537ba8739",
                     "label": "Column",
                     "name": "column",
                     "type": "flexible_content",
@@ -35,16 +64,16 @@
                         "id": ""
                     },
                     "layouts": {
-                        "5e67e47eede0a": {
-                            "key": "5e67e47eede0a",
-                            "name": "copy",
-                            "label": "Copy",
+                        "layout_5e8a538ce854a": {
+                            "key": "layout_5e8a538ce854a",
+                            "name": "wysiwyg",
+                            "label": "WYSIWYG",
                             "display": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_5e67f3942f3f9",
-                                    "label": "Copy",
-                                    "name": "copy",
+                                    "key": "field_5e8a5396a873a",
+                                    "label": "WYSIWYG",
+                                    "name": "wysiwyg",
                                     "type": "clone",
                                     "instructions": "",
                                     "required": 0,
@@ -67,7 +96,7 @@
                             "max": ""
                         }
                     },
-                    "button_label": "Add Row",
+                    "button_label": "add Row (inside Column)",
                     "min": "",
                     "max": ""
                 }
@@ -91,5 +120,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1585419677
+    "modified": 1586141225
 }

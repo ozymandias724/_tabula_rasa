@@ -1,11 +1,11 @@
 {
     "key": "group_5e67f14f43450",
-    "title": "Copy Module",
+    "title": "WYSIWYG Module",
     "fields": [
         {
             "key": "field_5e67f1ead50f1",
-            "label": "Copy",
-            "name": "copy",
+            "label": "WYSIWYG",
+            "name": "wysiwyg",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1585419675
+    "modified": 1586123415
 }

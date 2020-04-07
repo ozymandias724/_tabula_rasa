@@ -16,7 +16,6 @@
 
     // remove the no-js class from <html>
     $('html').removeClass('no-js');
-    
 
 
   });

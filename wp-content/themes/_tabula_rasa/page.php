@@ -2,28 +2,47 @@
 /**
  * Template: Page
  * 
-*/
+ */
 
-	// 
+
 	$fields = get_fields( get_the_ID() );
-
 	get_header();
 
+	
+// 
 ?>
 <main>
 	<?php
-		include_once('includes/pagehero.php');
-		/**
-		 *  Loop thru the 'content blocks' flexible content field
-		 *  include template parts by name if they are available
+
+		/**	
+		 * 
 		 */
-		if (!empty($fields['modular_content'])) {
+		
+		
+			include_once('includes/pagehero.php');
 			
-			foreach ($fields['modular_content'] as $cB) {
-				include_once('modules/'.$cB['acf_fc_layout'].'/module.'.$cB['acf_fc_layout'].'.php');
+			
+		// 
+
+		/**
+		 * 
+		 */
+		
+			if( !empty($fields['modular_content']) ){
+				
+				echo '<div class="sections">';
+				
+				foreach($fields['modular_content'] as $i => $mC) {
+
+					include_once( get_template_directory().'/modules/module-'.$mC['acf_fc_layout'].'/module-'.$mC['acf_fc_layout'].'.php');
+
+				}
+
+				echo '</div>';
+
 			}
-			
-		}
+
+		// 
 	?>
 </main>
 <?php

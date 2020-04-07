@@ -21,7 +21,7 @@ function do_add_authoredby_subfooter(){
 	echo '<span id="madebykylemarcy">proudly built by <a href="kylemarcy.com" target="_blank">@kylemarcy.com</a></span>';
 }
  
- 
+
 /**
  * TODO: NEEDS WORK
  * Return Nav Menu Name by Location

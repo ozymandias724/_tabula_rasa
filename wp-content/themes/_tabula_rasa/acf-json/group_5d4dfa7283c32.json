@@ -57,27 +57,6 @@
                     "height": ""
                 },
                 {
-                    "key": "field_5d4dfb598c55e",
-                    "label": "Social Media",
-                    "name": "social_media",
-                    "type": "clone",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "clone": [
-                        "group_5d3c6f8aea7da"
-                    ],
-                    "display": "seamless",
-                    "layout": "block",
-                    "prefix_label": 0,
-                    "prefix_name": 0
-                },
-                {
                     "key": "field_5d4dfb6c8c55f",
                     "label": "Phone Number",
                     "name": "phone_number",
@@ -134,5 +113,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Theme Settings Options Page",
-    "modified": 1585419663
+    "modified": 1585699946
 }
