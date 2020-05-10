@@ -5,29 +5,18 @@
  */
 
 
+
 	$fields = get_fields( get_the_ID() );
+
 	get_header();
-
 	
-// 
-?>
-<main>
-	<?php
+ ?>
+	
+	<main>
+		<?php
 
-		/**	
-		 * 
-		 */
-		
-		
 			include_once('includes/pagehero.php');
-			
-			
-		// 
-
-		/**
-		 * 
-		 */
-		
+				
 			if( !empty($fields['modular_content']) ){
 				
 				echo '<div class="sections">';
@@ -41,10 +30,12 @@
 				echo '</div>';
 
 			}
+		?>
+	</main>
 
-		// 
-	?>
-</main>
+	
 <?php
-get_footer();
-?>
+
+	get_footer();
+	
+ ?>

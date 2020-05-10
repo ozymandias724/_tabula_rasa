@@ -1,0 +1,14 @@
+section.tr__module-columns {
+  .flexgrid {
+    > ul {
+      > li {
+        > section.tr__module {
+          margin: getVar($sizing, gutter, px, normal) 0 0 0;
+          &:first-of-type {
+            margin: 0 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}

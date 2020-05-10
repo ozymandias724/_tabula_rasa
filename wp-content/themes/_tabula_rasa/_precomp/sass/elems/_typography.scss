@@ -1,0 +1,86 @@
+body {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  @include font-size(1.6rem);
+}
+
+
+p {
+  margin: getVar($sizing, gutter, px, small) 0 0 0;
+  &:first-child {
+    margin: 0;
+  }
+}
+
+
+a {
+  text-decoration: none;
+  color: rgba(getVar($colors, basic, black), 1);
+  border: none 0;
+}
+
+blockquote {
+  $g: getVar($sizing, gutter, px, small);
+  padding: 0 0 0 $g;
+  border: none 0;
+  border-left: 4px solid rgba(getVar($colors, brand, main), 1);
+
+  @media screen and (max-width: 640px) {
+    padding: 0 0 $g 0;
+    margin: 0 0 0 0;
+    border: none 0;
+    border-bottom: 4px solid rgba(getVar($colors, brand, main), 1);
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid rgba(getVar($colors, basic, black), 0.1);
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 1.5rem 0 0 0;
+
+  &:first-child {
+    margin: 0;
+  }
+}
+
+h1 {
+  @include font-size(6rem);
+}
+
+h2 {
+  @include font-size(4.8rem);
+}
+
+h3 {
+  @include font-size(3.4rem);
+}
+
+h4 {
+  @include font-size(2.4rem);
+}
+
+h5 {
+  @include font-size(2rem);
+}
+
+h6 {
+  @include font-size(1.6rem);
+}

@@ -9,9 +9,9 @@
 	];
 
 
-	$columns = $mC['columns'];
+	$columns = $mC['columns_module']['columns'];
 
-	$return .= '<section class="mod-columns"><div class="container '.$mC['width'].' flexgrid cols-'.count($columns).'"><ul>';
+	$return .= '<section class="tr__module tr__module-'.$mC['acf_fc_layout'].'"><div class="container '.$mC['columns_module']['width'].' flexgrid cols-'.count($columns).'"><ul>';
 
 	echo $return;
 	

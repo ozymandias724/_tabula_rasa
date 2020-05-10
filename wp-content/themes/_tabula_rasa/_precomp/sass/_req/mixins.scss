@@ -1,5 +1,62 @@
+// 
+// 
+// *    Mixins
+// 
+// 
+
+
+//    Grid Layout
+// 
+@mixin flexGrid($w  : 100%, $c : 3, $gX : 30px, $gY:$gX) {
+  overflow: hidden; // tuck-in the hanging margin of the last row
+
+  >ul {
+    margin: 0 0 -#{$gY} 0; // tuck-in the hanging margin of the last row
+  }
+
+  // 
+  >ul {
+    // 
+    display: flex;
+    flex-flow: row wrap;
+
+    >li {
+      $basis: calc((#{$w} - ((#{$c} - 1) * #{$gX})) / #{$c});
+      width: $basis;
+      flex: 0 0 auto;
+      margin: 0 $gX $gY 0; // set item margins
+
+      &:nth-child(n+1) {
+        margin: 0 $gX $gY 0; // reset next item margins
+      }
+
+      &:nth-child(#{$c}n) {
+        margin: 0 0 $gY 0; // clip margin-right for nth-column
+      }
+    }
+  }
+}
+
+//    Aspect Ratio
+// 
+@mixin aspectRatio($x : 1, $y : 1) {
+  $ratio: ($y / $x) * 100%;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: $ratio;
+  }
+}
+
+
+
+
+//  TODO: REFACTOR BELOW
+
 // this allows a grdient to be added to elements (we need a way to pass values into this to allow for varying gradient directions, sizes, etc.)
-@mixin bgGradient($el:after, $w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($pallete, basic, black), 0.0), $eC:rgba(getVar($pallete, basic, black), 0.66)) {
+@mixin bgGradient($el:after, $w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, basic, black), 0.0), $eC:rgba(getVar($colors, basic, black), 0.66)) {
   position: relative;
 
   &:#{$el} {
@@ -44,7 +101,7 @@
 @mixin accentUnderline($el : before, $h : 2px, $d:right) {
 
   position: relative;
-  padding-bottom: #{$h};
+  // padding-bottom: #{$h};
 
   &:#{$el} {
     content: '';
@@ -66,7 +123,7 @@
     width: 0;
     height: 0;
     transition: width 0.25s ease;
-    border-bottom: $h solid getVar($pallete, brand, daccent);
+    border-bottom: $h solid getVar($colors, brand, daccent);
   }
 
 }
@@ -97,52 +154,5 @@
 
   @else if $depth==5 {
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-  }
-}
-
-
-
-/** 
-*     Grid Layout Mixin
-*/
-@mixin flexGrid($w  : 100%, $c : 3, $gX : 30px, $gY:$gX) {
-  overflow: hidden; // tuck-in the hanging margin of the last row
-
-  >ul {
-    margin: 0 0 -#{$gY} 0; // tuck-in the hanging margin of the last row
-  }
-
-  // 
-  >ul {
-    // 
-    display: flex;
-    flex-flow: row wrap;
-
-    >li {
-      $basis: calc((#{$w} - ((#{$c} - 1) * #{$gX})) / #{$c});
-      width: $basis;
-      flex: 0 0 auto;
-      margin: 0 $gX $gY 0; // set item margins
-
-      &:nth-child(n+1) {
-        margin: 0 $gX $gY 0; // reset next item margins
-      }
-
-      &:nth-child(#{$c}n) {
-        margin: 0 0 $gY 0; // clip margin-right for nth-column
-      }
-    }
-  }
-}
-
-// 
-@mixin aspectRatio($x : 1, $y : 1) {
-  $ratio: ($y / $x) * 100%;
-  position: relative;
-
-  &:before {
-    content: '';
-    display: block;
-    padding-top: $ratio;
   }
 }

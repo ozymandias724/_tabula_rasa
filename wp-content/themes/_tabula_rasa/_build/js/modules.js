@@ -1,0 +1,2 @@
+!function(){"use strict";var l;(l=window.jQuery)((function(){l(".js__collapsable").length&&l(".js__collapsable").each((function(n,c){l(c).on("click","> .js__collapsable-title",(function(n){l(this).next("div").slideToggle()}))}))}))}();
+//# sourceMappingURL=modules.js.map

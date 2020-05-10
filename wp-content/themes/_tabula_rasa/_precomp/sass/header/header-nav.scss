@@ -1,289 +1,249 @@
 // 
+//			Header Navigation Styling
 // 
-// 
+header>.container {
+	// styles for the <header> must be placed in header.scss NOT this file
+
+	// top-level <li> fill the height of the header
+	.navlinks,
+	.navlinks>ul,
+	.navlinks>ul>li {
+		height: 100%;
+	}
+
+	.navicons {
+		display: none;
+	}
 
 
-//  Header Nav
-header {
-  // 
-  $g: getVar($sizing, gutter, px, normal);
+	.navlinks {
+		background-color: rgba(getVar($colors, basic, white), 1);
 
-  .navlinks {
+		// top-level <li> always a single row
+		>ul {
+			display: flex;
+			flex-flow: row nowrap;
 
-    // 
-    >ul {
-      display: flex;
-      flex-flow: row nowrap;
+			// 
+			@media screen and (min-width: 961px) {
+				>li {
+					margin: 0 0 0 getVar($sizing, gutter, px, small);
 
-      //  low specificity basic styling for any level line item
-      li {
+					&:first-of-type {
+						margin: 0 0 0 0;
+					}
 
-        // active items are underlined
-        &.active,
-        &.active-ancestor,
-        &.active-parent {
-          >a>span:before {
-            width: 100%;
-          }
-        }
+					>a {
 
-        // any/all links, any/all levels
-        a {
-          display: block; // using flexbox
+						// top-level <li> text is centered vertically
+						>span {
+							position: relative;
+							top: 50%;
+							transform: translateY(-50%);
+						}
+					}
 
-          // color: getVar($pallete, basic, black); // dark on light
+					>.sub-menu {
+						top: 90%;
+					}
+				}
+			}
+		}
 
-          // 
-          // link text (and chevron if a parent) accent underline effect
-          >span {
-            // color: getVar($pallete, basic, white); // light on dark
-            white-space: nowrap; // no line wrapping allowed
-            letter-spacing: 1px;
-            display: inline-block;
-            padding: 0 5px 2px 5px;
-            font-size: 1.6rem;
-            line-height: 1;
-            // underline hidden
-            @include accentUnderline();
-          }
+		// sub-menu float and <li> are in a column
+		.sub-menu {
+			display: flex;
+			flex-flow: column nowrap;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background-color: rgba(getVar($colors, basic, white), 1);
+			@include boxshadow(1);
+			min-width: 100%;
 
-          // underline revealed
-          &:hover,
-          &:focus,
-          &:active {
-            >span:before {
-              width: 100%;
-            }
-          }
-        }
+			// 
+			li {
+				>a {
+					padding: getVar($sizing, gutter, px, small);
+				}
+			}
 
-        // any parent item at any level
-        &.parent {
-          position: relative;
-
-          .sub-menu {
-            display: none;
-          }
-
-          // the down-chevron 
-          >a>span {
-            position: relative;
-            padding-right: 15px;
-
-            // note; :before is being used by the underline!
-            &:after {
-              content: "\f078";
-              font-family: "Font Awesome 5 Free";
-              font-weight: 900;
-              display: block;
-              position: absolute;
-              font-size: 1rem;
-              top: 50%;
-              right: 0;
-              transform: translate(0, -50%) rotate(0deg);
-              transition: all 0.25s ease;
-            }
-          }
-
-          &:hover,
-          &:focus,
-          &:active {
-            >a>span {
-
-              // rotate chevron
-              &:after {
-                transform: translate(0, -50%) rotate(180deg);
-                color: getVar($pallete, brand, main);
-              }
-            }
-
-            // reveal dropdown menu ( but not grand-child sub-menus )
-            >.sub-menu {
-              display: flex;
-            }
-          }
-
-          // 
-          &:last-child {
-            margin: 0 0 0 0;
-          }
-        }
-      }
+			// nested submenus fly out to the left
+			.sub-menu {
+				top: 0;
+				right: 90%;
+			}
+		}
 
 
-      //  top level line items only
-      >li {
-        // top level nav items line-height = header height
-        margin: 0 ($g / 2) 0 0;
 
-        &:last-of-type {
-          margin: 0 0 0 0;
-        }
-      }
+		// generic styles for basic elements
+		a {
+			display: block;
+			margin: 0 0 0 0;
+			height: 100%;
+
+			// style link text and underline effect
+			>span {
+				display: inline-block;
+				letter-spacing: 1px;
+				font-size: 1.6rem;
+				line-height: 1; // reset the line height -- its inheriting
+				// underline hidden
+				@include accentUnderline();
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				>span:before {
+					width: 100%; // underline any item on hover
+				}
+			}
+		}
 
 
-      // only for the desktop nav; styles for the dropdowns
-      // this is here to prevent a lot of work cleaning up the sub-menu for use in the mobile version
-      @media screen and (min-width:961px) {
+		// conditional classes for line items
+		li {
 
-        //  full height top level nav items
-        >li {
-          >a {
-            line-height: 72px;
-            white-space: nowrap;
-          }
-        }
+			&.menu-item-has-children {
+				position: relative; // sub-menus align to their parent
 
-        .sub-menu {
-          flex-flow: column nowrap;
-          position: absolute;
-          top: 100%;
-          right: 0;
-          // z-index: 9;
-          // 
+				.sub-menu {
+					display: none; // sub-menus initially hidden
+				}
 
-          background-color: rgba(getVar($pallete, basic, white), 1);
-          @include boxshadow(1);
+				//  add a down-chevron to items with sub-menus
+				>a>span {
+					position: relative;
+					padding: 0 15px 0 0;
 
-          >li {
-            padding: 7.5px 0;
+					&:after {
+						position: absolute;
+						display: inline-block;
+						content: "\f078";
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						font-size: 1rem;
+						top: 50%;
+						right: 0;
+						transform: translate(0, -50%) rotate(0deg);
+						transition: all 0.25s ease;
+					}
+				}
 
-            >a {
-              padding: 0px 15px;
+				&:hover,
+				&:focus,
+				&:active {
+					>a>span {
 
-              >span {
-                padding: 2px 0;
-              }
-            }
+						// rotate chevron
+						&:after {
+							transform: translate(0, -50%) rotate(180deg);
+							color: getVar($colors, brand, main);
+						}
+					}
 
-            &:hover,
-            &:focus,
-            &:active {
-              >a>span:before {
-                width: 100%;
-              }
-            }
-          }
+					@media screen and (min-width: 961px) {
+						// reveal direct childs dropdown menu
+						>.sub-menu {
+							display: flex;
+						}
+					}
+				}
+			}
 
-          .sub-menu {
-            top: 0;
-            right: 100%;
-          }
-        }
+			// underline active pages and parents of active pages
+			&.current-menu-item,
+			&.current-menu-ancestor,
+			&.current-menu-parent {
+				>a>span:before {
+					width: 100%;
+				}
+			}
+		}
+	}
 
-      }
-    }
 
-  }
+	@media screen and (max-width: 960px) {
 
-  .navicons {
-    display: none;
-    cursor: pointer;
-  }
-}
+		position: relative;
+		
+		
+		// revealed / hidden navicons
+		.navicons {
+			display: block;
+			i.fa-bars {
+				display: block;
+			}
+			i.fa-times {
+				display: none;
+			}
+			&.revealed {
+				i.fa-times {
+					display: block;
+				}
+				i.fa-bars {
+					display: none;
+				}
+			}
+		}
+		
 
-// overrides!
-header.fixed.fadein {
-  .navlinks>ul>li>a>span {
-    color: getVar($pallete, basic, white);
-  }
-}
+		// mobile nav changes
+		.navlinks {
+			@include boxshadow(2);
+			height: auto;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
 
-header.static {
+			ul {
+				display: none;
+				flex-flow: column nowrap; // force 1 column
+				li {
+					> a {
+						padding: getVar($sizing, gutter, px, small);	// accordion style padding/margin for line items
+					}
+				}
+			}
 
-  .logo.logo--text,
-  .navlinks>ul>li>a>span {
-    color: getVar($pallete, basic, black);
-  }
 
-  .header .navlinks>ul .sub-menu {
-    background-color: rgba(getVar($pallete, basic, white), 1);
+			// the mobile nav is revealed
+			&.revealed {
 
-    >li>a>span {
-      color: getVar($pallete, basic, black);
-    }
-  }
-}
-
-@media only screen and (max-width: 960px) {
-  header {
-    >.container {
-      .navlinks {
-        display: none;
-      }
-
-      .navicons {
-        display: block;
-        padding: 5px;
-        color: getVar($pallete, basic, white);
-
-        >i.fas {
-          &.fa-times {
-            display: none;
-          }
-
-          &.fa-bars {
-            display: block;
-          }
-        }
-      }
-
-      &.mobilenav-opened {
-        .navicons {
-          >i.fas {
-            color: getVar($pallete, brand, main);
-
-            &.fa-times {
-              display: block;
-            }
-
-            &.fa-bars {
-              display: none;
-            }
-          }
-        }
-
-        // at mobile, the .navlinks wrapper becomes a clickgaurd overlay
-        .navlinks {
-          display: block;
-          position: fixed;
-          top: 72px;
-          left: 0;
-          width: 100%;
-          height: calc(100% - 72px);
-          background-color: rgba(getVar($pallete, basic, black), 0.5); // tinted clickgaurd
-
-          >ul.menu {
-            border: 1px solid rgba(getVar($pallete, basic, white), 0.5);
-            background-color: rgba(getVar($pallete, basic, black), 1);
-            display: flex;
-            flex-flow: column nowrap;
-            width: 80%;
-            margin: 0 auto;
-            padding: 15px;
-            @include boxshadow(2);
-
-            >li {
-              margin: 15px 0 0 0;
-
-              &:last-child {
-                margin: 15px 0;
-              }
-            }
-
-            .sub-menu {
-              display: flex;
-              flex-flow: column nowrap;
-              display: flex;
-              margin-left: getVar($sizing, gutter, px, normal);
-
-              >li {
-                display: block;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+				> ul {
+					display: flex;
+				}
+				
+				
+			}
+			
+			li.menu-item-has-children {
+				// transition: background-color 0.3s ease;
+				.sub-menu {
+					box-shadow: none;
+					> li {
+						padding: 0 0 0 getVar($sizing, gutter, px, small);
+					}
+				}
+				
+				&.revealed {
+					background-color: rgba(getVar($colors, brand, lshade), 1);
+					>a >span:before {
+						width: 100%;
+					}
+					
+					
+					> .sub-menu {
+						display: flex;
+						top: 0;
+						right: 0;
+						position: relative;
+					}
+				}
+			}
+		}
+	}
 }

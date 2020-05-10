@@ -9,6 +9,10 @@ html {
   // 
   &.no-js {
 
+    &:after {
+      content: 'no-js';
+    }
+
   }
 
   // 

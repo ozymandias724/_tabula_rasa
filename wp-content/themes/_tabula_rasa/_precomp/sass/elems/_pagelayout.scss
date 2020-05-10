@@ -1,0 +1,82 @@
+
+// flex align the footer to the bottom
+body {
+  display: flex;
+  flex-flow: column nowrap;
+
+  > header {
+    flex: 0 0 auto;
+  }
+
+  > main {
+    flex: 1 0 auto;
+    margin: $headerHeight 0 0 0;
+  }
+
+  > footer {
+    flex: 0 0 auto;
+  }
+}
+
+
+
+
+// ( width containers for all blocks, a pattern that is ~everywhere~ )
+header,
+footer,
+.pagehero,
+main > .sections > section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  > .container {
+    margin: 0 auto;
+
+    //
+    &.full {
+      width: getVar($sizing, content, full);
+    }
+
+    &.wide {
+      width: getVar($sizing, content, wide);
+    }
+
+    &.normal {
+      width: getVar($sizing, content, normal);
+    }
+
+    &.narrow {
+      width: getVar($sizing, content, narrow);
+    }
+
+    //
+
+    // adjust widths
+    @media screen and (max-width: 1280px) {
+      &.narrow {
+        width: getVar($sizing, content, normal);
+      }
+    }
+
+    // adjust widths
+    @media screen and (max-width: 960px) {
+      &.normal,
+      &.narrow {
+        width: getVar($sizing, content, wide);
+      }
+    }
+  }
+}
+
+main > .pagehero {
+  margin: 0 0 getVar($sizing, gutter, px, large) 0;
+}
+
+.tr__module,
+main > .sections > section {
+  margin: getVar($sizing, gutter, px, large) 0 0 0;
+  &:first-of-type {
+    margin: 0 0 0 0;
+  }
+}

@@ -1,0 +1,45 @@
+// 
+// ? _buttons.scss refers to styling specific to the .button element
+// *  note: specifics for the button group module may not be in here, check there!
+// 
+
+
+.button {
+  display: inline-block;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: getVar($sizing, gutter, px, small) getVar($sizing, gutter, px, normal);
+
+  // default to a solid button
+  color: rgba(getVar($colors, basic, white), 1);
+  background-color: rgba(getVar($colors, brand, daccent), 1);
+  border: 2px solid rgba(getVar($colors, brand, daccent), 1);
+  &:hover, &:focus, &:active, &.active {
+    background-color: rgba(getVar($colors, basic, white), 1);
+    color: rgba(getVar($colors, brand, daccent), 1);
+  }
+
+
+  
+  &.hollow {
+    background-color: rgba(getVar($colors, basic, white), 1);
+    color: rgba(getVar($colors, brand, daccent), 1);
+    &:hover, &:focus, &:active, &.active {
+      color: rgba(getVar($colors, basic, white), 1);
+      background-color: rgba(getVar($colors, brand, daccent), 1);
+    } 
+  }
+
+  &.clear {
+    color: rgba(getVar($colors, basic, black), 1);
+    background-color: transparent;
+    border-color: transparent;
+    &:hover, &:focus, &:active, &.active {
+      color: rgba(getVar($colors, brand, daccent), 1);
+      border-color: transparent;
+      background-color: transparent;
+    } 
+    
+  }
+  
+}

@@ -3,10 +3,10 @@
     "title": "WYSIWYG Module",
     "fields": [
         {
-            "key": "field_5e67f1ead50f1",
-            "label": "WYSIWYG",
-            "name": "wysiwyg",
-            "type": "wysiwyg",
+            "key": "field_5eacd456193a5",
+            "label": "WYSIWYG Module",
+            "name": "wysiwyg_module",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,58 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5eb04f8af66a4",
+                    "label": "Width",
+                    "name": "width",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "narrow": "Narrow",
+                        "normal": "Normal",
+                        "wide": "Wide",
+                        "full": "Full",
+                        "auto": "Auto"
+                    },
+                    "default_value": [
+                        "normal"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e67f1ead50f1",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 1
+                }
+            ]
         }
     ],
     "location": [
@@ -39,5 +86,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1586123415
+    "modified": 1588613039
 }

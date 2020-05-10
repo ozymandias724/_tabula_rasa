@@ -1,3 +1,5 @@
+// import {throttle, debounce} from 'underscore';
+
 /**
  * @param {*} $ 
  * @param {*} window 
@@ -16,7 +18,6 @@
 
     // remove the no-js class from <html>
     $('html').removeClass('no-js');
-
 
   });
 }(window.jQuery, window, document));

@@ -1,0 +1,45 @@
+// background image wrapper (mimic figure elem)
+.bgimage {
+  .bgimage-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.25s ease;
+  }
+
+  // img zooms on interaction
+  &.bgimagezooms {
+    &:hover,
+    &:active,
+    &:focus {
+      // zoom img
+      .bgimage-img {
+        transform: scale(1.25);
+      }
+    }
+  }
+}
+
+
+figure {
+  position: relative;
+  overflow: hidden;
+}
+
+video,
+img {
+  object-fit: cover;
+  height: auto;
+  max-width: 100%;
+  display: inline-block;
+}
+
+
+.logo {
+  img {
+    max-width: 140px;
+  }
+}
