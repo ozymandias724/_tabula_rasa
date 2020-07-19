@@ -24,3 +24,4 @@ wp-content/themes/*/.sass-cache/*
 # Don't ignore certain NPM libraries we are including
 # !wp-content/themes/*/node_modules/@fortawesome/
 !wp-content/themes/*/node_modules/throttle-debounce/
+!wp-content/themes/*/node_modules/magnific-popup/dist/

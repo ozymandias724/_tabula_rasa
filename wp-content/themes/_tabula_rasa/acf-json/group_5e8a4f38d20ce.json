@@ -3,25 +3,6 @@
     "title": "Module Extends",
     "fields": [
         {
-            "key": "field_5e8a4f49e7892",
-            "label": "Layout Label",
-            "name": "layout_label",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5e8a4f51e7893",
             "label": "Show Advanced",
             "name": "show_advanced",
@@ -34,11 +15,12 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_permissions": "",
             "message": "",
             "default_value": 0,
             "ui": 1,
-            "ui_on_text": "Show Me",
-            "ui_off_text": "Stay Hidden"
+            "ui_on_text": "Visible",
+            "ui_off_text": "Hidden"
         },
         {
             "key": "field_5e8a4fb0e7894",
@@ -61,7 +43,10 @@
                 "class": "",
                 "id": ""
             },
+            "acfe_permissions": "",
             "layout": "table",
+            "acfe_seamless_style": 1,
+            "acfe_group_modal": 0,
             "sub_fields": [
                 {
                     "key": "field_5e8a4fbfe7895",
@@ -121,5 +106,13 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1586122793
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1590443822
 }

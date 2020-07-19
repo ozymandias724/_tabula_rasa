@@ -1,0 +1,223 @@
+{
+    "key": "group_5eb8d27f7f2dd",
+    "title": "News Item",
+    "fields": [
+        {
+            "key": "field_5eb8d28c57063",
+            "label": "News Item",
+            "name": "news_item",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "row",
+            "acfe_seamless_style": 1,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_5eb8d2c957066",
+                    "label": "Link To",
+                    "name": "link_to",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_5eb9bd3124532",
+                    "label": "Date \/ Time",
+                    "name": "date__time",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "layout": "row",
+                    "acfe_seamless_style": 1,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_5eb9bc9524530",
+                            "label": "Starting \/ At",
+                            "name": "starting",
+                            "type": "date_time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "d\/m\/Y g:i a",
+                            "return_format": "d\/m\/Y g:i a",
+                            "first_day": 1
+                        },
+                        {
+                            "key": "field_5eb9bccd24531",
+                            "label": "Ending",
+                            "name": "ending",
+                            "type": "date_time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "display_format": "d\/m\/Y g:i a",
+                            "return_format": "d\/m\/Y g:i a",
+                            "first_day": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5eb8d29957064",
+                    "label": "Headline",
+                    "name": "headline",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5eb8d31557067",
+                    "label": "Featured Image",
+                    "name": "featured_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "acfe_uploader": "wp",
+                    "acfe_thumbnail": 0,
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5eb8d32357068",
+                    "label": "Excerpt",
+                    "name": "excerpt",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "br",
+                    "acfe_textarea_code": 0
+                },
+                {
+                    "key": "field_5eb8d33c57069",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "news"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "block_editor",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments"
+    ],
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_form": 0,
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
+    "acfe_note": "",
+    "modified": 1589231310
+}

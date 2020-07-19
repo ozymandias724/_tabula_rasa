@@ -1,13 +1,13 @@
 {
     "key": "group_5d4dfa7283c32",
-    "title": "Theme Settings",
+    "title": "Social Settings",
     "fields": [
         {
             "key": "field_5d4e0bfe1354a",
-            "label": "Theme Settings",
-            "name": "theme_settings",
+            "label": "Social Settings",
+            "name": "social_settings",
             "type": "group",
-            "instructions": "general config for theme \/ site \/ business owner",
+            "instructions": "general config for theme \/ site \/ business owner contact and social media info",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -107,7 +107,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "theme-settings"
+                "value": "acf-options-social"
             }
         ]
     ],
@@ -118,14 +118,19 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "Theme Settings Options Page",
+    "description": "Theme Settings - Social",
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
     ],
     "acfe_permissions": "",
     "acfe_form": 0,
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
-    "modified": 1589140024
+    "modified": 1589159052
 }

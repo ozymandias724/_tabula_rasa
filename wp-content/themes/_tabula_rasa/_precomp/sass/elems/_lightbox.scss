@@ -1,0 +1,31 @@
+body {
+
+  .mfp-wrap {
+
+    .mfp-container {
+
+      .mfp-content {
+        text-align: center;
+
+
+        >div {
+          
+
+          background-color: rgba(getVar($colors, basic, white), 1);
+          text-align: center;
+          padding: getVar($sizing, gutter, px, large);
+          margin: 10vh auto;
+          max-height: 80vh;
+          display: inline-block;
+          overflow: hidden;
+          overflow-y: auto;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

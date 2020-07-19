@@ -1,0 +1,232 @@
+{
+    "key": "group_5ecc434a8d92d",
+    "title": "Manage Content Types",
+    "fields": [
+        {
+            "key": "field_5ecc446ea6e53",
+            "label": "Manage Content Types",
+            "name": "manage_content_types",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "table",
+            "acfe_seamless_style": 1,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_5ecc4475a6e54",
+                    "label": "Staff",
+                    "name": "staff",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "layout": "block",
+                    "acfe_seamless_style": 1,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_5ecc452048c41",
+                            "label": "Status",
+                            "name": "status",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Enabled",
+                            "ui_off_text": "Disabled"
+                        },
+                        {
+                            "key": "field_5ecc46d1bd52a",
+                            "label": "Rewrite",
+                            "name": "rewrite",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5ecc456748c43",
+                    "label": "News",
+                    "name": "news",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "layout": "block",
+                    "acfe_seamless_style": 1,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_5ecc456748c44",
+                            "label": "Status",
+                            "name": "status",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Enabled",
+                            "ui_off_text": "Disabled"
+                        },
+                        {
+                            "key": "field_5ecc46e8bd52b",
+                            "label": "Rewrite",
+                            "name": "rewrite",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5ecc457048c45",
+                    "label": "Events",
+                    "name": "events",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "layout": "block",
+                    "acfe_seamless_style": 1,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_5ecc457048c46",
+                            "label": "Status",
+                            "name": "status",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Enabled",
+                            "ui_off_text": "Disabled"
+                        },
+                        {
+                            "key": "field_5ecc46f3bd52c",
+                            "label": "Rewrite",
+                            "name": "rewrite",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-content"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1590445856
+}

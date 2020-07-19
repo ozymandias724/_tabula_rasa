@@ -26,7 +26,7 @@
 		'
 	];
 
-	$tS = !empty(get_field('theme_settings', 'options')) ? get_field('theme_settings', 'options') : '';
+	$tS = !empty(get_field('social_settings', 'options')) ? get_field('social_settings', 'options') : '';
 
 
 	$return .= sprintf(

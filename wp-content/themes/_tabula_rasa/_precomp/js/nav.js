@@ -48,7 +48,9 @@ import {throttle, debounce} from 'underscore';
 			_didClickParent: function (e) {
 				
 				// stop the click from navigating (only toggles the menu open)
-				e.preventDefault();
+				if( !$(e.target.offsetParent).hasClass('revealed') ){
+					e.preventDefault();
+				}
 				
 				$(e.target.offsetParent).toggleClass('revealed');				// toggle this <li> reveal class (active state)
 

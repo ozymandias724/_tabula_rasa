@@ -7,7 +7,7 @@
 
 //    Grid Layout
 // 
-@mixin flexGrid($w  : 100%, $c : 3, $gX : 30px, $gY:$gX) {
+@mixin flexGrid($w  : 100%, $c : 3, $gX : 60px, $gY:$gX) {
   overflow: hidden; // tuck-in the hanging margin of the last row
 
   >ul {

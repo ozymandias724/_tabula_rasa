@@ -7,7 +7,7 @@
 		"uuidString": "80C207A9-A6ED-4DA4-A828-A08708F39D84"
 		}
 	],
-"creatorBuild": "32137",
+"creatorBuild": "32186",
 "files": {
 	"/_build/css/admin.css": {
 		"aP": 1,
@@ -97,6 +97,17 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/_precomp/js/_lib/jquery.magnific-popup.min.js": {
+		"bF": 2,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_precomp/js/_lib/jquery.magnific-popup.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/_precomp/js/_lib/jquery.min.js": {
 		"bF": 2,
 		"ft": 64,
@@ -105,6 +116,17 @@
 		"oA": 1,
 		"oAP": "/_precomp/js/_lib/jquery.min-min.js",
 		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/_precomp/js/_lib/select2.min.js": {
+		"bF": 2,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_precomp/js/_lib/select2.min-min.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
@@ -277,6 +299,16 @@
 		"oAP": "/_precomp/sass/_lib/fa5/webfonts/fa-solid-900.woff2",
 		"oF": 1
 		},
+	"/_precomp/sass/_lib/magnific-popup.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_precomp/sass/_lib/magnific-popup-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/_precomp/sass/_lib/rfs.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -289,6 +321,26 @@
 		"oF": 1,
 		"oS": 3,
 		"sct": 1
+		},
+	"/_precomp/sass/_lib/select2-bootstrap4.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_precomp/sass/_lib/select2-bootstrap4.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/_precomp/sass/_lib/select2.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_precomp/sass/_lib/select2.min-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/_precomp/sass/_req/fonts.scss": {
 		"aP": 1,
@@ -403,6 +455,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/_precomp/sass/elems/_grid.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/_precomp/sass/elems/_lightbox.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_precomp/sass/elems/_lightbox.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -657,6 +722,46 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/acf-json/group_5eb8a4db6fea2.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/group_5eb8a4db6fea2-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/group_5eb8c5f1770ae.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/group_5eb8c5f1770ae-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/group_5eb8d27f7f2dd.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/group_5eb8d27f7f2dd-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/group_5eb9ca573a423.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/group_5eb9ca573a423-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/group_5ecc434a8d92d.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/group_5ecc434a8d92d-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/classes/class.setup-theme.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -679,6 +784,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/functions.php",
+		"oF": 0
+		},
+	"/functions/custom_posts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/functions/custom_posts.php",
 		"oF": 0
 		},
 	"/functions/menus.php": {
@@ -1001,6 +1114,54 @@
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
+		},
+	"/modules/module-staff/module-staff.js": {
+		"bF": 2,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/modules/module-staff/module-staff-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/modules/module-staff/module-staff.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/modules/module-staff/module-staff.php",
+		"oF": 0
+		},
+	"/modules/module-staff/module-staff.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/modules/module-staff/module-staff.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/modules/module-staff/staff-filtering.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/modules/module-staff/staff-filtering.php",
+		"oF": 0
+		},
+	"/modules/module-staff/staff-lightbox.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/modules/module-staff/staff-lightbox.php",
+		"oF": 0
 		},
 	"/modules/module-video/module-video.js": {
 		"bF": 2,
@@ -1668,6 +1829,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"default-case-last": {
+			"active": 0,
+			"optionString": ""
+			},
 		"default-param-last": {
 			"active": 0,
 			"optionString": ""
@@ -2080,6 +2245,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-loss-of-precision": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-magic-numbers": {
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
@@ -2195,6 +2364,10 @@
 		"no-regex-spaces": {
 			"active": 1,
 			"optionString": ""
+			},
+		"no-restricted-exports": {
+			"active": 0,
+			"optionString": "{'restrictedNamedExports': []}"
 			},
 		"no-restricted-globals": {
 			"active": 0,
@@ -2339,6 +2512,10 @@
 		"no-use-before-define": {
 			"active": 0,
 			"optionString": "{'functions': true, 'classes': true, 'variables': true}"
+			},
+		"no-useless-backreference": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-useless-call": {
 			"active": 0,

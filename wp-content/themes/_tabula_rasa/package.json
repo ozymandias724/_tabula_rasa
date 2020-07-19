@@ -7,6 +7,9 @@
   "license": "UNLICENSED",
   "repository": {},
   "dependencies": {
+    "@ttskch/select2-bootstrap4-theme": "^1.4.0",
+    "magnific-popup": "^1.1.0",
+    "select2": "^4.0.13",
     "underscore": "^1.10.2"
   }
 }

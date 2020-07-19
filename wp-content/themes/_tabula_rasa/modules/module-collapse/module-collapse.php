@@ -9,7 +9,7 @@
 	];
 
 
-	$columns = $mC['collapse_module']['columns_module']['columns'];
+	$columns = $mC['collapse_module']['content_columns'];
 
   $return .= '
     <section class="tr__module tr__module-'.$mC['acf_fc_layout'].'"><div class="container '.$mC['collapse_module']['width'].'">

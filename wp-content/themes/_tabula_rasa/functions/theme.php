@@ -1,4 +1,7 @@
 <?php 
+// 
+
+
 /**
  * Filter the body_class function
  *
@@ -8,16 +11,28 @@
 function do_filter_body_class( $classes ) {
 	global $post;
 	if ( isset( $post ) ) {
-			$classes[] = $post->post_type . '-' . $post->post_name; // add custom post type to body class
+		$classes[] = $post->post_type . '-' . $post->post_name; // adds post-postname, page-pagename, customposttype-postname etc.
 	}
 	return $classes;
 }
 add_filter( 'body_class', 'do_filter_body_class' );
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * TODO: FINISH THIS
+ */
 add_action( 'wp_footer', 'do_add_authoredby_subfooter' );
 function do_add_authoredby_subfooter(){
-
 	echo '<span id="madebykylemarcy">proudly built by <a href="kylemarcy.com" target="_blank">@kylemarcy.com</a></span>';
 }
 
@@ -26,7 +41,9 @@ function do_add_authoredby_subfooter(){
 
 
 
+
 /**
+ * TODO: FINISH THIS
  * Undocumented function
  *
  * @return void
@@ -130,21 +147,48 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-settings',
 		'capability'	=> 'read_private_posts',
-		'icon_url'      => 'dashicons-admin-settings',
-		'redirect'		=> false,
-        'position' 		=> 3,
-    ));
+		'icon_url'      => '',
+		'position' 		=> 2,
+		// 'redirect'		=> false,
+	));
 
-    acf_add_options_sub_page(array(
-		'page_title' 	=> 'Header Settings',
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'General',
+		'menu_title'	=> 'General', 
+		'parent_slug'	=> 'theme-settings',
+		'icon_url' => '',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Content',
+		'menu_title'	=> 'Content', 
+		'parent_slug'	=> 'theme-settings',
+		'icon_url' => '',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Social',
+		'menu_title'	=> 'Social', 
+		'parent_slug'	=> 'theme-settings',
+		'icon_url' => '',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Header',
 		'menu_title'	=> 'Header',
 		'parent_slug'	=> 'theme-settings',
+		'icon_url' => '',
 	));
-    acf_add_options_sub_page(array(
-		'page_title' 	=> 'Footer Settings',
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Footer',
 		'menu_title'	=> 'Footer',
 		'parent_slug'	=> 'theme-settings',
+		'icon_url' => '',
 	));
+
+	
+
 }
 
 

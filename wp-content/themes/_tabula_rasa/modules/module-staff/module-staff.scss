@@ -1,0 +1,49 @@
+// 
+// ?  module-staff.scss refers to styling the staff module
+// 
+// 
+
+.tr__module.tr__module-staff {
+
+
+  .staff-filtering > form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 0 getVar($sizing, gutter, px, large) 0;
+
+    > input[type="submit"] {
+      margin: 0 0 0 getVar($sizing, gutter, px, normal);
+
+    }
+    > .filters {
+      display: block;
+      margin: 0 0 0 getVar($sizing, gutter, px, normal);
+      &:first-child {
+        margin: 0 0 0 0;
+      }
+      select {
+        padding: getVar($sizing, gutter, px, small);
+        
+        option {
+          padding: 0 getVar($sizing, gutter, px, small);
+        }
+      }
+    }
+  }
+
+  
+  
+}
+
+.mfp-content > div {
+  .staffmember {
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    .headshot {
+      max-width: 300px;
+    }
+  }
+}
