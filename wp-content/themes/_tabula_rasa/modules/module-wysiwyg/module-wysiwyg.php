@@ -18,8 +18,8 @@
    */
     $return .= sprintf(
       $guides[0]
-      ,$mC['wysiwyg_module']['width']
-      ,$mC['wysiwyg_module']['content']
+      ,$mC['width']
+      ,$mC['content']
     );
     
   // 

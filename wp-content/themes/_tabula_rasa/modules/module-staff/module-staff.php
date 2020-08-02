@@ -33,21 +33,21 @@
 
 	$return .= '
 		<section class="tr__module tr__module-'.$mC['acf_fc_layout'].'">
-			<div class="container '.$mC['staff_module']['width'].' flexgrid cols-'.$mC['staff_module']['options']['col_count'].'">
+			<div class="container '.$mC['width'].' flexgrid cols-'.$mC['options']['col_count'].'">
 	';
 
 
-	if( !empty($mC['staff_module']['options']['enable_filtering']) ){
+	if( !empty($mC['options']['enable_filtering']) ){
     include( locate_template( '/modules/module-staff/staff-filtering.php', false, false ) );
 	}
 
 
 
 	// 
-	$linkToDetail = !empty($mC['staff_module']['options']['link_to_detail']) ? true : false;
+	$linkToDetail = !empty($mC['options']['link_to_detail']) ? true : false;
 
 	$return .= '<ul>';
-	foreach( $mC['staff_module']['staff_members'] as $sM ){
+	foreach( $mC['staff_members'] as $sM ){
 
 		// get staff member fields
 		$rec = get_fields($sM)['staff_member'];
@@ -57,7 +57,7 @@
 		$linkUrl = get_permalink($sM);
 
 		// enable lightbox
-		if( !empty($mC['staff_module']['options']['use_lightbox']) ) {
+		if( !empty($mC['options']['use_lightbox']) ) {
 			$linkUrl = 'javascript:void(0);'; // remove link href
 			$linkAttrs = ' class="js__biolightbox" data-action="tr__biolightbox" data-postid="'.$sM.'"'; // add mfp attrs
 		}

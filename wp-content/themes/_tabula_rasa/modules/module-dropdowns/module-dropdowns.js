@@ -15,15 +15,15 @@
    *   jQuery Document Ready
    */
     $(function () {
-      if( $('.js__collapsable').length ){
+      if( $('.js__dropdown').length ){
         
-        var collapsables = $('.js__collapsable');
+        var collapsables = $('.js__dropdown');
 
         
         collapsables.each(function(index, element){
         
         
-          $(element).on('click', '> .js__collapsable-title', function(e){
+          $(element).on('click', '> .js__dropdown-title', function(e){
 
 
             $(this).next('div').slideToggle();

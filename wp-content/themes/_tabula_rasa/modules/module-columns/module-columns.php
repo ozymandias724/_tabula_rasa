@@ -9,11 +9,11 @@
 	];
 
 
-	$columns = $mC['columns_module']['columns'];
+	$columns = $mC['columns'];
 
-	$return .= '<section class="tr__module tr__module-'.$mC['acf_fc_layout'].'"><div class="container '.$mC['columns_module']['width'].' flexgrid cols-'.count($columns).'"><ul>';
+	// open section
+	echo '<section class="tr__module tr__module-'.$mC['acf_fc_layout'].'"><div class="container '.$mC['width'].' flexgrid cols-'.count($columns).'"><ul>';
 
-	echo $return;
 	
 	foreach( $columns as $i => $column ){
 		echo '<li>';
@@ -27,9 +27,9 @@
 	}
 	
 
-	$return = '</ul></div></section>';
+	// close section
+	echo '</ul></div></section>';
 
 	
-	echo $return;
 // 
 ?>

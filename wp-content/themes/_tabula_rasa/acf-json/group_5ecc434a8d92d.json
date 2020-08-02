@@ -1,12 +1,12 @@
 {
     "key": "group_5ecc434a8d92d",
-    "title": "Manage Content Types",
+    "title": "Manage Custom Content Types",
     "fields": [
         {
-            "key": "field_5ecc446ea6e53",
-            "label": "Manage Content Types",
-            "name": "manage_content_types",
-            "type": "group",
+            "key": "field_5f25feb1d8dc8",
+            "label": "Custom Content Types",
+            "name": "custom_content_types",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,18 +15,23 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_permissions": "",
-            "layout": "table",
-            "acfe_seamless_style": 1,
-            "acfe_group_modal": 0,
+            "acfe_permissions": [
+                "administrator"
+            ],
+            "acfe_repeater_stylised_button": 1,
+            "collapsed": "field_5f25ff87d8dcc",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add a Content Type",
             "sub_fields": [
                 {
-                    "key": "field_5ecc4475a6e54",
-                    "label": "Staff",
-                    "name": "staff",
-                    "type": "group",
+                    "key": "field_5f25fee1d8dc9",
+                    "label": "Status",
+                    "name": "status",
+                    "type": "true_false",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -34,59 +39,19 @@
                         "id": ""
                     },
                     "acfe_permissions": "",
-                    "layout": "block",
-                    "acfe_seamless_style": 1,
-                    "acfe_group_modal": 0,
-                    "sub_fields": [
-                        {
-                            "key": "field_5ecc452048c41",
-                            "label": "Status",
-                            "name": "status",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "Enabled",
-                            "ui_off_text": "Disabled"
-                        },
-                        {
-                            "key": "field_5ecc46d1bd52a",
-                            "label": "Rewrite",
-                            "name": "rewrite",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ]
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Enabled",
+                    "ui_off_text": "Disabled"
                 },
                 {
-                    "key": "field_5ecc456748c43",
-                    "label": "News",
-                    "name": "news",
-                    "type": "group",
+                    "key": "field_5f25ff87d8dcc",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -94,57 +59,17 @@
                         "id": ""
                     },
                     "acfe_permissions": "",
-                    "layout": "block",
-                    "acfe_seamless_style": 1,
-                    "acfe_group_modal": 0,
-                    "sub_fields": [
-                        {
-                            "key": "field_5ecc456748c44",
-                            "label": "Status",
-                            "name": "status",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "Enabled",
-                            "ui_off_text": "Disabled"
-                        },
-                        {
-                            "key": "field_5ecc46e8bd52b",
-                            "label": "Rewrite",
-                            "name": "rewrite",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ]
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
-                    "key": "field_5ecc457048c45",
-                    "label": "Events",
-                    "name": "events",
-                    "type": "group",
+                    "key": "field_5f25ff68d8dcb",
+                    "label": "Singular",
+                    "name": "singular",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -154,51 +79,51 @@
                         "id": ""
                     },
                     "acfe_permissions": "",
-                    "layout": "block",
-                    "acfe_seamless_style": 1,
-                    "acfe_group_modal": 0,
-                    "sub_fields": [
-                        {
-                            "key": "field_5ecc457048c46",
-                            "label": "Status",
-                            "name": "status",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "Enabled",
-                            "ui_off_text": "Disabled"
-                        },
-                        {
-                            "key": "field_5ecc46f3bd52c",
-                            "label": "Rewrite",
-                            "name": "rewrite",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ]
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f25feffd8dca",
+                    "label": "Rewrite",
+                    "name": "rewrite",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f2601f40e233",
+                    "label": "Hierarchical",
+                    "name": "hierarchical",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         }
@@ -215,7 +140,7 @@
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "left",
+    "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
@@ -228,5 +153,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1590445856
+    "modified": 1596326471
 }

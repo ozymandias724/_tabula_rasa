@@ -1,12 +1,12 @@
 {
     "key": "group_5eadfe2bdf229",
-    "title": "Collapse Module",
+    "title": "Dropdowns Module",
     "fields": [
         {
-            "key": "field_5eadfe47ba42a",
-            "label": "Collapse Module",
-            "name": "collapse_module",
-            "type": "group",
+            "key": "field_5eb36cbca200a",
+            "label": "Width",
+            "name": "width",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,38 +15,42 @@
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "narrow": "Narrow",
+                "normal": "Normal",
+                "wide": "Wide",
+                "full": "Full",
+                "auto": "Auto"
+            },
+            "default_value": "normal",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f26de736091a",
+            "label": "Dropdowns",
+            "name": "dropdowns",
+            "type": "repeater",
+            "instructions": "adding multiple drop-downs will use an accordion style",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "acfe_repeater_stylised_button": 1,
+            "collapsed": "field_5eb36d9d3fc97",
+            "min": 0,
+            "max": 0,
             "layout": "block",
+            "button_label": "Add Dropdown to Grouping",
             "sub_fields": [
-                {
-                    "key": "field_5eb36cbca200a",
-                    "label": "Width",
-                    "name": "width",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "narrow": "Narrow",
-                        "normal": "Normal",
-                        "wide": "Wide",
-                        "full": "Full",
-                        "auto": "Auto"
-                    },
-                    "default_value": [
-                        "normal"
-                    ],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
-                },
                 {
                     "key": "field_5eb36d9d3fc97",
                     "label": "Title",
@@ -115,12 +119,7 @@
     ],
     "acfe_permissions": "",
     "acfe_form": 0,
-    "acfe_meta": {
-        "acfcloneindex": {
-            "acfe_meta_key": "",
-            "acfe_meta_value": ""
-        }
-    },
+    "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1589145201
+    "modified": 1596390920
 }

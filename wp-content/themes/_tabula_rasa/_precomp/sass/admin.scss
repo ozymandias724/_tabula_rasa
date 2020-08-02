@@ -1,1 +1,14 @@
 
+
+
+//  * improved layout visibility toggle, piggyback acfe toggle class
+//      when toggled off, hide all fields, and outline the handle
+//      (acfe already dims the layout including the handle)
+.acfe-flexible-layout-hidden {
+  >.acf-fields {
+    display: none;
+  }
+  > .acf-fc-layout-handle {
+    outline: 1px solid rgba(204, 0, 0, 1);
+  }
+}

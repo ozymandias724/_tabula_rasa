@@ -3,11 +3,11 @@
     "title": "Staff Module",
     "fields": [
         {
-            "key": "field_5eb9ca6d1d2c6",
-            "label": "Staff Module",
-            "name": "staff_module",
-            "type": "group",
-            "instructions": "add staff members",
+            "key": "field_5eb9ca7a1d2c7",
+            "label": "Width",
+            "name": "width",
+            "type": "select",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,16 +16,45 @@
                 "id": ""
             },
             "acfe_permissions": "",
-            "layout": "row",
+            "choices": {
+                "narrow": "Narrow",
+                "normal": "Normal",
+                "wide": "Wide",
+                "full": "Full",
+                "auto": "Auto"
+            },
+            "default_value": "normal",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ebacf8112747",
+            "label": "Options",
+            "name": "options",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "table",
             "acfe_seamless_style": 1,
             "acfe_group_modal": 0,
             "sub_fields": [
                 {
-                    "key": "field_5eb9ca7a1d2c7",
-                    "label": "Width",
-                    "name": "width",
-                    "type": "select",
-                    "instructions": "",
+                    "key": "field_5eb9cae71d2c9",
+                    "label": "Column Count",
+                    "name": "col_count",
+                    "type": "range",
+                    "instructions": "number of columns before the next row",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -34,29 +63,19 @@
                         "id": ""
                     },
                     "acfe_permissions": "",
-                    "choices": {
-                        "narrow": "Narrow",
-                        "normal": "Normal",
-                        "wide": "Wide",
-                        "full": "Full",
-                        "auto": "Auto"
-                    },
-                    "default_value": [
-                        "normal"
-                    ],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
+                    "default_value": 3,
+                    "min": 1,
+                    "max": 7,
+                    "step": "",
+                    "prepend": "",
+                    "append": "Column"
                 },
                 {
-                    "key": "field_5ebacf8112747",
-                    "label": "Options",
-                    "name": "options",
-                    "type": "group",
-                    "instructions": "adjust settings for this staff layout",
+                    "key": "field_5ebace1f3898d",
+                    "label": "Link to Detail",
+                    "name": "link_to_detail",
+                    "type": "true_false",
+                    "instructions": "enable for each staff member to link to a detail view",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -65,132 +84,23 @@
                         "id": ""
                     },
                     "acfe_permissions": "",
-                    "layout": "table",
-                    "acfe_seamless_style": 1,
-                    "acfe_group_modal": 0,
-                    "sub_fields": [
-                        {
-                            "key": "field_5eb9cae71d2c9",
-                            "label": "Columns",
-                            "name": "col_count",
-                            "type": "range",
-                            "instructions": "number of columns before the next row",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "default_value": 3,
-                            "min": 1,
-                            "max": 7,
-                            "step": "",
-                            "prepend": "",
-                            "append": "Column"
-                        },
-                        {
-                            "key": "field_5ebace1f3898d",
-                            "label": "Link to Detail",
-                            "name": "link_to_detail",
-                            "type": "true_false",
-                            "instructions": "enable for each staff member to link to a detail view",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "message": "",
-                            "default_value": 1,
-                            "ui": 1,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_5eba88abcdf88",
-                            "label": "Use Lightbox",
-                            "name": "use_lightbox",
-                            "type": "true_false",
-                            "instructions": "enable to open detail view in a lightbox instead of an internal page<br \/>\r\ncustom profile URLs will still open in a new tab\/window",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_5ebace1f3898d",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "Enabled",
-                            "ui_off_text": "Disabled"
-                        },
-                        {
-                            "key": "field_5eb9cb1d1d2ca",
-                            "label": "Show Excerpts",
-                            "name": "show_excerpts",
-                            "type": "true_false",
-                            "instructions": "display bio excerpts",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "Shown",
-                            "ui_off_text": "Hidden"
-                        },
-                        {
-                            "key": "field_5ec14f7c02d6b",
-                            "label": "Enable Filtering",
-                            "name": "enable_filtering",
-                            "type": "true_false",
-                            "instructions": "display a form to filter staff",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "message": "",
-                            "default_value": 0,
-                            "ui": 1,
-                            "ui_on_text": "Enabled",
-                            "ui_off_text": "Disabled"
-                        }
-                    ]
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 },
                 {
-                    "key": "field_5ec1526da7168",
-                    "label": "Allowed Filters",
-                    "name": "allowed_filters",
-                    "type": "group",
-                    "instructions": "selected filters with no records will not appear even if chosen",
+                    "key": "field_5eba88abcdf88",
+                    "label": "Use Lightbox",
+                    "name": "use_lightbox",
+                    "type": "true_false",
+                    "instructions": "enable to open detail view in a lightbox instead of an internal page<br \/>\r\ncustom profile URLs will still open in a new tab\/window",
                     "required": 0,
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5ec14f7c02d6b",
+                                "field": "field_5ebace1f3898d",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -202,69 +112,85 @@
                         "id": ""
                     },
                     "acfe_permissions": "",
-                    "layout": "table",
-                    "acfe_seamless_style": 1,
-                    "acfe_group_modal": 0,
-                    "sub_fields": [
-                        {
-                            "key": "field_5ec1527da7169",
-                            "label": "Departments",
-                            "name": "departments",
-                            "type": "taxonomy",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "taxonomy": "departments",
-                            "field_type": "checkbox",
-                            "add_term": 0,
-                            "save_terms": 0,
-                            "load_terms": 0,
-                            "return_format": "id",
-                            "acfe_bidirectional": {
-                                "acfe_bidirectional_enabled": "0"
-                            },
-                            "multiple": 0,
-                            "allow_null": 0
-                        },
-                        {
-                            "key": "field_5ec15292a716a",
-                            "label": "Tags",
-                            "name": "tags",
-                            "type": "taxonomy",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "acfe_permissions": "",
-                            "taxonomy": "staff-tags",
-                            "field_type": "checkbox",
-                            "add_term": 0,
-                            "save_terms": 0,
-                            "load_terms": 0,
-                            "return_format": "id",
-                            "acfe_bidirectional": {
-                                "acfe_bidirectional_enabled": "0"
-                            },
-                            "multiple": 0,
-                            "allow_null": 0
-                        }
-                    ]
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Enabled",
+                    "ui_off_text": "Disabled"
                 },
                 {
-                    "key": "field_5eb9caa01d2c8",
-                    "label": "Staff Members",
-                    "name": "staff_members",
-                    "type": "relationship",
+                    "key": "field_5eb9cb1d1d2ca",
+                    "label": "Show Excerpts",
+                    "name": "show_excerpts",
+                    "type": "true_false",
+                    "instructions": "display bio excerpts",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Shown",
+                    "ui_off_text": "Hidden"
+                },
+                {
+                    "key": "field_5ec14f7c02d6b",
+                    "label": "Enable Filtering",
+                    "name": "enable_filtering",
+                    "type": "true_false",
+                    "instructions": "display a form to filter staff",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Enabled",
+                    "ui_off_text": "Disabled"
+                }
+            ]
+        },
+        {
+            "key": "field_5ec1526da7168",
+            "label": "Allowed Filters",
+            "name": "allowed_filters",
+            "type": "group",
+            "instructions": "selected filters with no records will not appear even if chosen",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec14f7c02d6b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "table",
+            "acfe_seamless_style": 1,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_5ec1527da7169",
+                    "label": "Departments",
+                    "name": "departments",
+                    "type": "taxonomy",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -274,25 +200,77 @@
                         "id": ""
                     },
                     "acfe_permissions": "",
-                    "post_type": [
-                        "staff"
-                    ],
-                    "taxonomy": "",
-                    "filters": [
-                        "search",
-                        "taxonomy"
-                    ],
-                    "elements": [
-                        "featured_image"
-                    ],
-                    "min": "",
-                    "max": "",
+                    "taxonomy": "departments",
+                    "field_type": "checkbox",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
                     "return_format": "id",
                     "acfe_bidirectional": {
                         "acfe_bidirectional_enabled": "0"
-                    }
+                    },
+                    "multiple": 0,
+                    "allow_null": 0
+                },
+                {
+                    "key": "field_5ec15292a716a",
+                    "label": "Tags",
+                    "name": "tags",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "taxonomy": "staff-tags",
+                    "field_type": "checkbox",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "acfe_bidirectional": {
+                        "acfe_bidirectional_enabled": "0"
+                    },
+                    "multiple": 0,
+                    "allow_null": 0
                 }
             ]
+        },
+        {
+            "key": "field_5eb9caa01d2c8",
+            "label": "Staff Members",
+            "name": "staff_members",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "post_type": [
+                "staff"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "id",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            }
         }
     ],
     "location": [
@@ -320,5 +298,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1589728237
+    "modified": 1596324041
 }

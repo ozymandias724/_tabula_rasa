@@ -1,28 +1,41 @@
 <?php
-
-
- 
- 
-class TR__CustomPosts {
+/**
+ * 
+ * 		Custom Posts	
+ * 
+ * 		TODO: the theme settings should be controlling what custom post types are created!
+ * 		TODO: that also means CHECKING for existing types; and PROTECTING that data FFS
+ * 		TODO: (figure that out more)
+ */
+class TR__CustomPosts
+{
 
 
 	public static function _init(){
+
 		
+		if( !empty(get_field('custom_content_types', 'options')) ){
+			foreach( get_field('custom_content_types', 'options') as $cpt ){
+				TR__CustomPosts::_register_custom_post_type(
+					$name = !empty($cpt['name']) ? $cpt['name'] : ''
+					,$singular = !empty($cpt['singular']) ? $cpt['singular'] : ''
+					,$rewrite = !empty($cpt['rewrite']) ? $cpt['rewrite'] : ''
+					,$hierarchical = !empty($cpt['hierarchical']) ? $cpt['hierarchical'] : ''
+				);
+			}
+		}
+
 		// * STAFF
-		TR__CustomPosts::_register_custom_post_type($name = 'Staff', $singular = 'Staff Member', $rewrite = 'Our Team');
+		// TR__CustomPosts::_register_custom_post_type($name = 'Staff', $singular = 'Staff Member', $rewrite = 'Our Team');
+
+		// TODO: incorporate adding custom taxonomies, and preloading custom terms, through the CMS
 		TR__CustomPosts::_register_custom_taxonomy($post_type = 'Staff', $name = 'Departments', $singular = 'Department', $rewrite = '');
 		TR__CustomPosts::_register_custom_taxonomy($post_type = 'Staff', $name = 'Staff Tags', $singular = 'Staff Tag', $hierarchical = false);
 		TR__CustomPosts::_add_taxonomy_terms($taxonomy = 'Staff Tags', $terms = ['Leadership', 'Faculty', 'Staff', 'Temporary', 'Contract']); // ? these cannot ever be deleted if this is here
-
-		// * NEWS
-		TR__CustomPosts::_register_custom_post_type($name = 'News', $singular = 'News Item', $rewrite = '');
-		TR__CustomPosts::_register_custom_taxonomy($post_type = 'News', $name = 'News Types', $singular = 'News Type', $rewrite = '');
-
-		// * EVENTS
-		TR__CustomPosts::_register_custom_post_type($name = 'Events', $singular = 'Event', $rewrite = '');
-		TR__CustomPosts::_register_custom_taxonomy($post_type = 'Events', $name = 'Event Locations', $singular = 'Event Location', $rewrite = '');
-		TR__CustomPosts::_add_taxonomy_terms($taxonomy = 'Event Locations', $terms = ['Boston', 'London']); // ? these cannot ever be deleted if this is here
 		
+		
+		
+
 	}
 
 
@@ -86,15 +99,20 @@ class TR__CustomPosts {
 		
 	}
 
+
+
+
+
+
 	/**
-	 * Undocumented function
+	 * 		Register Custom Post Types (passing some important args, not all tho)
 	 *
 	 * @param string $name
 	 * @param string $singular
 	 * @param string $rewrite
 	 * @return void
 	 */
-	public static function _register_custom_post_type( $name = '', $singular = '', $rewrite = '' ){
+	public static function _register_custom_post_type( $name = '', $singular = '', $rewrite = '',  $hierarchical = false ){
 
 		// check if this post type already exists
 		if( !post_type_exists( sanitize_title( $name ) ) ){
@@ -104,7 +122,7 @@ class TR__CustomPosts {
 				'singular_name'         => _x( $singular, 'Post type singular name', 'textdomain' ),
 				'menu_name'             => _x( $name, 'Admin Menu text', 'textdomain' ),
 				'name_admin_bar'        => _x( $singular, 'Add New on Toolbar', 'textdomain' ),
-				'add_new'               => __( 'Add New', 'textdomain' ),
+				'add_new'               => __( 'Add New '.$singular, 'textdomain' ),
 				'add_new_item'          => __( 'Add New '.$singular, 'textdomain' ),
 				'new_item'              => __( 'New '.$singular, 'textdomain' ),
 				'edit_item'             => __( 'Edit '.$singular, 'textdomain' ),
@@ -136,7 +154,7 @@ class TR__CustomPosts {
 				'rewrite'            => array( 'slug' => empty($rewrite) ? sanitize_title( $name ) : sanitize_title( $rewrite ) ),
 				'capability_type'    => 'post',
 				'has_archive'        => true,
-				'hierarchical'       => false,
+				'hierarchical'       => $hierarchical,
 				'menu_position'      => null,
 				'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 			);
@@ -146,6 +164,11 @@ class TR__CustomPosts {
 		}
 
 	}
+
+
+
+
+
 
 }
 

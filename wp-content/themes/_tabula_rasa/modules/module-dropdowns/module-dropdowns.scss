@@ -1,0 +1,34 @@
+.tr__module.tr__module-dropdowns {
+
+
+
+
+	.dropdowns {
+
+		
+		.dropdown {
+			padding: getVar($sizing, gutter, px, small) 0;
+			border-bottom: 1px solid rgba(getVar($colors, basic, gray), 1);
+			
+			margin: 0 0 getVar($sizing, gutter, px, normal) 0;
+			&:last-child {
+				margin: 0 0 0 0;
+			}
+
+			>.dropdown-title {
+				cursor: pointer;
+				display: block;
+				width: 100%;
+			}
+
+			>div {
+				margin: getVar($sizing, gutter, px, normal) 0 0 0;
+				display: none;
+			}
+		}
+
+
+	}
+
+
+}
