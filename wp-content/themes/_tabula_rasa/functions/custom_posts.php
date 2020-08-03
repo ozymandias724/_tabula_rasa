@@ -3,39 +3,22 @@
  * 
  * 		Custom Posts	
  * 
- * 		TODO: the theme settings should be controlling what custom post types are created!
- * 		TODO: that also means CHECKING for existing types; and PROTECTING that data FFS
- * 		TODO: (figure that out more)
+ * 		TODO: refactor this a bit; were going with NO cms control, just build for reusable templatates!
+ * 					ideally, we can look for a json file is all it will take
+ * 
+ * 
  */
 class TR__CustomPosts
 {
 
-
 	public static function _init(){
 
-		
-		if( !empty(get_field('custom_content_types', 'options')) ){
-			foreach( get_field('custom_content_types', 'options') as $cpt ){
-				TR__CustomPosts::_register_custom_post_type(
-					$name = !empty($cpt['name']) ? $cpt['name'] : ''
-					,$singular = !empty($cpt['singular']) ? $cpt['singular'] : ''
-					,$rewrite = !empty($cpt['rewrite']) ? $cpt['rewrite'] : ''
-					,$hierarchical = !empty($cpt['hierarchical']) ? $cpt['hierarchical'] : ''
-				);
-			}
-		}
-
 		// * STAFF
-		// TR__CustomPosts::_register_custom_post_type($name = 'Staff', $singular = 'Staff Member', $rewrite = 'Our Team');
-
-		// TODO: incorporate adding custom taxonomies, and preloading custom terms, through the CMS
+		TR__CustomPosts::_register_custom_post_type($name = 'Staff', $singular = 'Staff Member', $rewrite = 'Our Team');
 		TR__CustomPosts::_register_custom_taxonomy($post_type = 'Staff', $name = 'Departments', $singular = 'Department', $rewrite = '');
 		TR__CustomPosts::_register_custom_taxonomy($post_type = 'Staff', $name = 'Staff Tags', $singular = 'Staff Tag', $hierarchical = false);
 		TR__CustomPosts::_add_taxonomy_terms($taxonomy = 'Staff Tags', $terms = ['Leadership', 'Faculty', 'Staff', 'Temporary', 'Contract']); // ? these cannot ever be deleted if this is here
 		
-		
-		
-
 	}
 
 

@@ -161,13 +161,6 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Content',
-		'menu_title'	=> 'Content', 
-		'parent_slug'	=> 'theme-settings',
-		'icon_url' => '',
-	));
-
-	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Social',
 		'menu_title'	=> 'Social', 
 		'parent_slug'	=> 'theme-settings',
