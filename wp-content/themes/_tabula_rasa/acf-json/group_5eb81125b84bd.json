@@ -47,7 +47,7 @@
                     "key": "field_5eb81171e9128",
                     "label": "Link",
                     "name": "link",
-                    "type": "acfe_advanced_link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -57,8 +57,7 @@
                         "id": ""
                     },
                     "acfe_permissions": "",
-                    "post_type": "",
-                    "taxonomy": ""
+                    "return_format": "array"
                 },
                 {
                     "key": "field_5eb81138e9127",
@@ -117,5 +116,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1589137482
+    "modified": 1596775732
 }

@@ -10,8 +10,6 @@
 	<main>
 		<?php
 			
-			include_once('includes/pagehero.php');
-
 			if( !empty($fields['modular_content']) ){
 				
 				echo '<div class="sections">';

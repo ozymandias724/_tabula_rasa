@@ -11,7 +11,10 @@
   $return .= sprintf(
     $guides[0]
     ,do_shortcode('[wpforms id="'.$mC['form']->ID.'" title="false" description="false"]')
-  );
+	);
+	
+
+	$return .= '</div></section>';
   
   echo $return;
 
