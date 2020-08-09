@@ -136,7 +136,7 @@ class TR__CustomPosts
 				'query_var'          => true,
 				'rewrite'            => array( 'slug' => empty($rewrite) ? sanitize_title( $name ) : sanitize_title( $rewrite ) ),
 				'capability_type'    => 'post',
-				'has_archive'        => true,
+				'has_archive'        => false,
 				'hierarchical'       => $hierarchical,
 				'menu_position'      => null,
 				'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),

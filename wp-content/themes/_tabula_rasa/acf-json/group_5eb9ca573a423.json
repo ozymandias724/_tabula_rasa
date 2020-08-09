@@ -36,7 +36,7 @@
             "label": "Options",
             "name": "options",
             "type": "group",
-            "instructions": "",
+            "instructions": "configure this staff layout",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -46,7 +46,7 @@
             },
             "acfe_permissions": "",
             "layout": "table",
-            "acfe_seamless_style": 1,
+            "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
             "sub_fields": [
                 {
@@ -54,7 +54,7 @@
                     "label": "Column Count",
                     "name": "col_count",
                     "type": "range",
-                    "instructions": "number of columns before the next row",
+                    "instructions": "cols-# per row",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -68,14 +68,14 @@
                     "max": 7,
                     "step": "",
                     "prepend": "",
-                    "append": "Column"
+                    "append": "Column(s)"
                 },
                 {
                     "key": "field_5ebace1f3898d",
-                    "label": "Link to Detail",
+                    "label": "Link to Single",
                     "name": "link_to_detail",
                     "type": "true_false",
-                    "instructions": "enable for each staff member to link to a detail view",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -95,7 +95,7 @@
                     "label": "Use Lightbox",
                     "name": "use_lightbox",
                     "type": "true_false",
-                    "instructions": "enable to open detail view in a lightbox instead of an internal page<br \/>\r\ncustom profile URLs will still open in a new tab\/window",
+                    "instructions": "open single in lightbox<br \/>\r\n(custom URLs still open in a new tab\/window)",
                     "required": 0,
                     "conditional_logic": [
                         [
@@ -123,7 +123,7 @@
                     "label": "Show Excerpts",
                     "name": "show_excerpts",
                     "type": "true_false",
-                    "instructions": "display bio excerpts",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -143,7 +143,7 @@
                     "label": "Enable Filtering",
                     "name": "enable_filtering",
                     "type": "true_false",
-                    "instructions": "display a form to filter staff",
+                    "instructions": "enable filtering staff by categories \/ tags",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -165,7 +165,7 @@
             "label": "Allowed Filters",
             "name": "allowed_filters",
             "type": "group",
-            "instructions": "selected filters with no records will not appear even if chosen",
+            "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
@@ -183,7 +183,7 @@
             },
             "acfe_permissions": "",
             "layout": "table",
-            "acfe_seamless_style": 1,
+            "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
             "sub_fields": [
                 {
@@ -298,5 +298,8 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1596324041
+    "acfe_categories": {
+        "layout": "Layout"
+    },
+    "modified": 1596930784
 }

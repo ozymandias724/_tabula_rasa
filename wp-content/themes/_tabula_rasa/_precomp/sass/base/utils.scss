@@ -1,47 +1,30 @@
 // 
+// * 			utility css classes
 // 
-// 
+
+
+
+
+
+// html element conditional classes
 html {
 
-  
-  // 
-  // 
-  // 
+	// no-js class (removed by js on load)
   &.no-js {
-
     &:after {
       content: 'no-js';
     }
-
   }
-
-  // 
-  // 
-  // 
-
-
-
-
-  
 }
 
 
-// 
-// 
-// 
+// body element conditional classes
+// ? maybe make this its own place
 body {
-  
-  
-  // 
-  // 
-  // 
+
+	
+  // js has restricted viewport from scrolling
   &.js__noscroll {
     overflow: hidden;
   }
-  
-  
-  
-  
-  
-  
 }

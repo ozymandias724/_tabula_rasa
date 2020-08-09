@@ -113,7 +113,7 @@ class SetupTheme
 			, true
 		);
 		wp_register_script( 
-			'tr_modules'
+			'tr__modules'
 			, get_template_directory_uri() . '/_build/js/modules.js'
 			, array('main')
 			, filemtime(get_template_directory() . '/_build/js/modules.js')
@@ -142,7 +142,7 @@ class SetupTheme
 		wp_enqueue_script( 'mfp-js' );
 		wp_enqueue_script( 'main' );
 		wp_enqueue_script( 'tr_nav' );
-		wp_enqueue_script( 'tr_modules' );
+		wp_enqueue_script( 'tr__modules' );
 
 
 	}

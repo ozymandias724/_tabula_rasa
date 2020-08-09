@@ -714,6 +714,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/acf-json/group_5f2f5a779cdff.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/group_5f2f5a779cdff-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/classes/class.setup-theme.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -973,6 +981,35 @@
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
+		},
+	"/modules/module-media/module-media.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/modules/module-media/module-media.php",
+		"oF": 0
+		},
+	"/modules/module-media/module-media.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/modules/module-media/module-media.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/modules/module-staff/module-staff-single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/modules/module-staff/module-staff-single.php",
+		"oF": 0
 		},
 	"/modules/module-staff/module-staff.js": {
 		"bF": 2,
