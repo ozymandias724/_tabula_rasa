@@ -46,14 +46,14 @@
             },
             "acfe_permissions": "",
             "layouts": {
-                "layout_5eb61711baf56": {
-                    "key": "layout_5eb61711baf56",
+                "layout_5f2ff0a3b11b8": {
+                    "key": "layout_5f2ff0a3b11b8",
                     "name": "buttons",
                     "label": "Buttons",
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_5eb61719baf57",
+                            "key": "field_5f2ff0a9b11b9",
                             "label": "Buttons",
                             "name": "buttons",
                             "type": "clone",
@@ -65,13 +65,15 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_permissions": "",
                             "clone": [
-                                "group_5eadfe04852a9"
+                                "group_5f2feada0db4a"
                             ],
                             "display": "seamless",
                             "layout": "block",
                             "prefix_label": 0,
-                            "prefix_name": 0
+                            "prefix_name": 0,
+                            "acfe_clone_modal": 0
                         }
                     ],
                     "min": "",
@@ -429,7 +431,15 @@
     ],
     "acfe_permissions": "",
     "acfe_form": 0,
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
-    "modified": 1596939355
+    "acfe_categories": {
+        "admin": "Admin"
+    },
+    "modified": 1596977354
 }

@@ -1,0 +1,46 @@
+// 
+
+
+section.tr__module-buttons {
+
+	// hanging margins expected to keep everything squared up
+	> div {
+		overflow: hidden;																																									// * tuck-in hanging margins
+		> div.buttons {
+			margin: -#{getVar($sizing, gutter, px, normal)} 0 0 -#{getVar($sizing, gutter, px, normal)};		// * tuck-in hanging margins
+			> a.button {
+				margin: getVar($sizing, gutter, px, normal) 0 0 getVar($sizing, gutter, px, normal);					// * tuck-in hanging margins
+			}
+		}
+	}
+
+
+	
+	// flexbox layout
+	> div {
+		
+		> div.buttons {
+
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			
+			> a.button {
+				flex: 0 0 auto;
+			}
+
+
+			&.align-center {
+				justify-content: center;
+			}
+			&.align-right {
+				justify-content: flex-end;
+			}
+			
+		}
+		
+	}
+	
+	
+}
