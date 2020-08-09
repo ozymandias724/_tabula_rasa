@@ -1,7 +1,8 @@
 body {
   font-family: "Lato", sans-serif;
   letter-spacing: 0.5px;
-  font-weight: 300;
+	font-weight: 300;
+	line-height: 1.375;
   @include font-size(1.6rem);
 }
 

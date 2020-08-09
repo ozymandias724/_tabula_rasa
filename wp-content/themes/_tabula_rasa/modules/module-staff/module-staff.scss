@@ -7,8 +7,20 @@
 
 // 	* staff block
 // 
+
+.mfp-content .mfp--staffmember,
 .tr__module.tr__module-staff {
 
+
+	.staffmember {
+		.headshot {
+			max-width: 500px;
+		}
+	}
+	
+	
+	
+	
 
 	.staff-filtering > form {
 		display: flex;

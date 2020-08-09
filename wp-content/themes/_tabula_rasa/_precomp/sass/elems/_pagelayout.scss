@@ -75,7 +75,7 @@ main > .pagehero {
 
 .tr__module,
 main > .sections > section {
-  margin: getVar($sizing, gutter, px, large) 0 0 0;
+  margin: getVar($sizing, gutter, px, vxlarge) 0 0 0;
   &:first-of-type {
     margin: 0 0 0 0;
   }

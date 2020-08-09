@@ -11,7 +11,7 @@
 	$return = '';
 	$guides = [
 		'
-		<div>
+		<div class="mfp--staffmember">
 			<div class="staffmember">
 				<div class="headshot"><img %1$s alt="" /></div>
 				<div class="content">

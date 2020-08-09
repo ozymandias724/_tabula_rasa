@@ -25,7 +25,7 @@
 
 		foreach( $dropdowns as $ddRow ){
 			// 
-			echo '<div class="dropdown js__dropdown"><p class="js__dropdown-title dropdown-title">'.$ddRow['title'].'</p>';
+			echo '<div class="dropdown js__dropdown"><a class="js__dropdown-title dropdown-title" href="javascript:void(0);" title="Expand '.$ddRow['title'].'">'.$ddRow['title'].'</a>';
 
 			foreach( $ddRow['content_columns'] as $i => $column ){
 				echo '<div>';
