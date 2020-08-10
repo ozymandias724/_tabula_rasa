@@ -65,72 +65,33 @@ function tr__getLogo(){
 
 
 
-
-
-
-
-
- 
-/**
- * TODO: NEEDS WORK -- use a sprintf, and make it real nice please
- * 
- * 
- */
-function get_the_address( $mapfield ){
-	if( $mapfield ) {
-		// Loop over segments and construct HTML.
-		$address = '';
-		foreach( array('street_number', 'street_name', 'city', 'state_short', 'post_code', 'country_short') as $i => $k ) {
-			if( isset( $mapfield[ $k ] ) ) {
-				$address .= sprintf( '<span class="segment-%s">%s</span>, ', $k, $mapfield[ $k ] );
-			}
-		}
-		// Trim trailing comma.
-		$address = trim( $address, ', ' );
-		// Display HTML.
-		return '<p>' . $address . '.</p>';
-	}
-}
-
-/**
- * TODO: NEEDS WORK
- * Return Nav Menu Name by Location
- *
- * @param string $location
- * @return string
- */
-function get_nav_menu_name($location = ''){
-	$theme_locations = get_nav_menu_locations();
-	$menu_obj = get_term( $theme_locations[$location], 'nav_menu' );
-	return $menu_obj->name;
-}
-
-
 /**
  *  TODO: NEEDS WORK
  */
-	function get_iconlinks( $iLs ){
 
-		if( $iLs ){
-			$return = '<ul class="iconlinks">';
-			foreach( $iLs as $iL ){
 
-				$return .= sprintf(
-					'<li class="iconlinks-icon"><a href="%1$s" title="%2$s" target="%3$s">%4$s%5$s</a></li>'
-					,$iL['link']['url']
-					,$iL['link']['title']
-					,$iL['link']['target']
-					,$iL['icon']
-					,$iL['text']
-				);
-			}
-
-			$return .= '</ul>';
-
-			return $return;
-		}
+function get_iconlinks( $iLs ){
+	if( !empty($iLs) ){
+		$return = '<ul class="iconlinks">';
 		
+		foreach( $iLs as $iL ){
+			$return .= sprintf(
+				'<li class="iconlinks-icon"><a href="%1$s" title="%2$s" target="%3$s">%4$s%5$s</a></li>'
+				,$iL['link']['url']
+				,$iL['link']['title']
+				,$iL['link']['target']
+				,$iL['icon']
+				,'<span>'.$iL['text'].'</span>'
+			);
+
+		}
+
+		$return .= '</ul>';
+
+		return $return;
 	}
+	
+}
 // 
 
 

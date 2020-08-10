@@ -1,34 +1,64 @@
 // 
 // 
 // 
+
+
+
 footer.footer {
 
   border: none 0;
   border-top: 1px solid black;
-  margin: getVar($sizing, gutter, px, large) 0 0 0;
+  margin: getVar($sizing, gutter, px, vxlarge) 0 0 0;
 
   
   > .container {
-    padding: getVar($sizing, gutter, px, normal);
-
+    padding: getVar($sizing, gutter, px, large) 0;
     display: flex;
-    justify-content: space-between;
+		justify-content: space-between;
+		// align-items: center;
+
     > section {
       display: flex;
-      margin: 0 0 0 getVar($sizing, gutter, px, large);
-      &:first-of-type {
-        margin: 0 0 0 0;
-        flex-flow: column nowrap;
-      }
-      &:last-of-type {
+			
+			
+			&.footer-siteinfo {
+				margin: 0 0 0 0;
+				flex-flow: column nowrap;
+				> div {
+					margin: getVar($sizing, gutter, px, small) 0 0 0;
+					&:first-child {
+						margin: 0 0 0 0;
+					}
+				}
+				> div {
+					overflow: hidden;
+					.iconlinks {
+						display: flex;
+						margin: -#{getVar($sizing, gutter, px, small)} 0 0 -#{getVar($sizing, gutter, px, small)};
+						> li {
+							margin: getVar($sizing, gutter, px, small) 0 0 getVar($sizing, gutter, px, small);
+
+							i {
+								font-size: 2.4rem;
+							}
+						}
+	
+						
+					}
+				}
+				.tr__googlemap {
+					min-height: 240px;
+				}
+
+			}
+
+			
+      &.footer-menus {
+				margin: 0 0 0 getVar($sizing, gutter, px, large);
         > div {
           margin: 0 0 0 getVar($sizing, gutter, px, large);
           &:first-of-type {
             margin: 0 0 0 0;
-          }
-          > p {
-            display: block;
-            @include font-size(2rem);
           }
         }
       }

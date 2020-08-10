@@ -119,6 +119,13 @@ class SetupTheme
 			, filemtime(get_template_directory() . '/_build/js/modules.js')
 			, true
 		);
+		wp_register_script( 
+			'tr__googlemaps'
+			, get_template_directory_uri() . '/_build/js/gmaps.js'
+			, array('main')
+			, filemtime(get_template_directory() . '/_build/js/gmaps.js')
+			, true
+		);
 
 		wp_register_script(
 			'mfp-js'
@@ -143,6 +150,7 @@ class SetupTheme
 		wp_enqueue_script( 'main' );
 		wp_enqueue_script( 'tr_nav' );
 		wp_enqueue_script( 'tr__modules' );
+		wp_enqueue_script( 'tr__googlemaps' );
 
 
 	}
